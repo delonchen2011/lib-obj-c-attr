@@ -32,44 +32,35 @@
 
 
 #import "RFPropertyInfo.h"
-
 #import <objc/runtime.h>
 #import "ROADAttribute.h"
-#import "RFTypeDecoder.h"
 
-
-@interface RFPropertyInfo () {
-    NSString * _propertyName;
-    NSString * _className;
-    Class _hostClass;
-    NSString * _typeName;
-    NSString * _setterName;
-    NSString * _getterName;
-    BOOL _dynamic;
-    BOOL _weak;
-    BOOL _nonatomic;
-    BOOL _strong;
-    BOOL _readonly;
-    BOOL _copied;
-    BOOL _primitive;
+@interface RFPropertyInfo ()
+{
     Class _typeClass;
-    
+    NSString *_typeName;
     objc_property_t _property;
+    NSString * _propertyName;
+    Class _hostClass;
+    NSString *_typeEncoding;
+    SEL _getter;
+    SEL _setter;
+    NSString *_ivarName;
     
-    BOOL _isSpecifiersFilled;
-    BOOL _isAttributeNameFilled;
+    RFEncodingType _encodingType;
+    RFEncodingSpecifier _encodingSpecifier;
+    
+    NSArray *_protocols;
 }
 
 @property (copy, nonatomic) NSString *propertyName;
 @property (assign, nonatomic) Class hostClass;
-
+@property (copy, nonatomic) NSString *className;
+@property (strong, nonatomic) NSArray *attributes;
 @end
 
 
 @implementation RFPropertyInfo
-
-@dynamic attributes;
-
 
 #pragma mark - Initialization
 
@@ -113,191 +104,285 @@
     return [result filteredArrayUsingPredicate:aPredicate];
 }
 
-// For reference see apple's documetation about declared properties:
-// https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtPropertyIntrospection.html
 + (RFPropertyInfo *)property:(objc_property_t)property forClass:(Class)class {
-    RFPropertyInfo * const info = [[RFPropertyInfo alloc] initWithProperty:property];
-    info.hostClass = class;
-    
+    RFPropertyInfo * const info = [[RFPropertyInfo alloc] initWithProperty:property hostClass:class];
     return info;
 }
 
-+ (NSString *)propertyAttributeNameForField:(const char *)fieldName property:(const objc_property_t)property {
-    NSString *result;
-    char *name = property_copyAttributeValue(property, fieldName);
-    
-    if (name != NULL) {
-        result = @(name);
-        free(name);
-    }
-    
-    return result;
-}
-
-+ (BOOL)property:(const objc_property_t)property containsSpecifier:(const char *)specifier {
-    char *attributeValue = property_copyAttributeValue(property, specifier);
-    BOOL const result = attributeValue != NULL;
-    free(attributeValue);
-    return result;
-}
-
-- (id)initWithProperty:(objc_property_t)property {
+- (id)initWithProperty:(objc_property_t)property hostClass:(Class)hostClass{
     self = [super init];
-    if (self) {
-        _property = property;
-        _isSpecifiersFilled = NO;
-        _isAttributeNameFilled = NO;
+    if (self)
+    {
+        _property     = property;
+        _hostClass    = hostClass;
+        
+        self.className = NSStringFromClass(hostClass);
+        
+        [self fillProperty];
+        [self fillAttributes];
     }
     return self;
 }
 
-- (NSArray *)attributes {
-    return [self.hostClass RF_attributesForProperty:self.propertyName];
-}
-
 - (id)attributeWithType:(Class)requiredClassOfAttribute {
-    return [self.hostClass RF_attributeForProperty:self.propertyName withAttributeType:requiredClassOfAttribute];
-}
-
-
-#pragma mark - Specifiers
-
-- (NSString *)propertyName {
-    if (!_propertyName) {
-        _propertyName = @(property_getName(_property));
-    }
     
-    return _propertyName;
-}
-
-- (NSString *)className {
-    if (!_className) {
-        _className = NSStringFromClass(self.hostClass);
-    }
+    id result = nil;
     
-    return _className;
-}
-
-- (NSString *)typeName {
-    if (!_isAttributeNameFilled) {
-        [self fillAttributeName];
-    }
-    
-    return _typeName;
-}
-
-- (Class)typeClass {
-    if (!_typeClass) {
-        if (!_isAttributeNameFilled) {
-            [self fillAttributeName];
+    for (id attribute in _attributes)
+    {
+        if ([attribute isKindOfClass:requiredClassOfAttribute])
+        {
+            result = attribute;
+            break;
         }
-        _typeClass = NSClassFromString([RFTypeDecoder RF_classNameFromTypeName:_typeName]);
     }
     
-    return _typeClass;
+    return result;
 }
 
-- (BOOL)isPrimitive {
-    if (!_isAttributeNameFilled) {
-        [self fillAttributeName];
+- (id)attributeWithProtocol:(Protocol *)requiredProtocolOfAttribute
+{
+    id result = nil;
+    
+    for (id attribute in _attributes)
+    {
+        if ([attribute conformsToProtocol:requiredProtocolOfAttribute])
+        {
+            result = attribute;
+            break;
+        }
     }
     
-    return _primitive;
+    return result;
 }
-
-- (BOOL)isDynamic {
-    if (!_isSpecifiersFilled) {
-        [self fillSpecifiers];
-    }
-    
-    return _dynamic;
-}
-
-- (BOOL)isWeak {
-    if (!_isSpecifiersFilled) {
-        [self fillSpecifiers];
-    }
-    
-    return _weak;
-}
-
-- (BOOL)isNonatomic {
-    if (!_isSpecifiersFilled) {
-        [self fillSpecifiers];
-    }
-    
-    return _nonatomic;
-}
-
-- (BOOL)isReadonly {
-    if (!_isSpecifiersFilled) {
-        [self fillSpecifiers];
-    }
-    
-    return _readonly;
-}
-
-- (BOOL)isStrong {
-    if (!_isSpecifiersFilled) {
-        [self fillSpecifiers];
-    }
-    
-    return _strong;
-}
-
-- (BOOL)isCopied {
-    if (!_isSpecifiersFilled) {
-        [self fillSpecifiers];
-    }
-    
-    return _copied;
-}
-
-- (NSString *)getterName {
-    if (!_getterName) {
-        _getterName = [[self class] propertyAttributeNameForField:"G" property:_property];
-    }
-    
-    return _getterName;
-}
-
-- (NSString *)setterName {
-    if (!_setterName) {
-        _setterName = [[self class] propertyAttributeNameForField:"S" property:_property];
-    }
-    
-    return _setterName;
-}
-
 
 #pragma mark - Utility methods
 
+- (void)fillTypesWithTypeEncoding:(const char *)typeEncoding
+{
+    size_t len = strlen(typeEncoding);
+    if (len > 0)
+    {
+        _typeEncoding = [NSString stringWithUTF8String:typeEncoding];
 
-static const char * kPropertyInfoDynamicSpecifier = "D";
-static const char * kPropertyInfoWeakSpecifier = "W";
-static const char * kPropertyInfoNonatomicSpecifier = "N";
-static const char * kPropertyInfoReadonlySpecifier = "R";
-static const char * kPropertyInfoStrongSpecifier = "&";
-static const char * kPropertyInfoCopiedSpecifier = "C";
-
-
-- (void)fillSpecifiers {
-    _dynamic = [[self class] property:_property containsSpecifier:kPropertyInfoDynamicSpecifier];
-    _weak = [[self class] property:_property containsSpecifier:kPropertyInfoWeakSpecifier];
-    _nonatomic = [[self class] property:_property containsSpecifier:kPropertyInfoNonatomicSpecifier];
-    _readonly = [[self class] property:_property containsSpecifier:kPropertyInfoReadonlySpecifier];
-    _strong = [[self class] property:_property containsSpecifier:kPropertyInfoStrongSpecifier];
-    _copied = [[self class] property:_property containsSpecifier:kPropertyInfoCopiedSpecifier];
-    
-    _isSpecifiersFilled = YES;
+        switch (*typeEncoding)
+        {
+            case 'v': _encodingType = RFEncodingTypeVoid; break;
+            case 'B': _encodingType = RFEncodingTypeBool; break;
+            case 'c': _encodingType = RFEncodingTypeInt8; break;
+            case 'C': _encodingType = RFEncodingTypeUInt8; break;
+            case 's': _encodingType = RFEncodingTypeInt16; break;
+            case 'S': _encodingType = RFEncodingTypeUInt16; break;
+            case 'i': _encodingType = RFEncodingTypeInt32; break;
+            case 'I': _encodingType = RFEncodingTypeUInt32; break;
+            case 'l': _encodingType = RFEncodingTypeInt32; break;
+            case 'L': _encodingType = RFEncodingTypeUInt32; break;
+            case 'q': _encodingType = RFEncodingTypeInt64; break;
+            case 'Q': _encodingType = RFEncodingTypeUInt64; break;
+            case 'f': _encodingType = RFEncodingTypeFloat; break;
+            case 'd': _encodingType = RFEncodingTypeDouble; break;
+            case 'D': _encodingType = RFEncodingTypeLongDouble; break;
+            case '#': _encodingType = RFEncodingTypeClass; break;
+            case ':': _encodingType = RFEncodingTypeSEL; break;
+            case '*': _encodingType = RFEncodingTypeCString; break;
+            case '^': _encodingType = RFEncodingTypePointer; break;
+            case '[': _encodingType = RFEncodingTypeCArray; break;
+            case '(': _encodingType = RFEncodingTypeUnion; break;
+            case '{': _encodingType = RFEncodingTypeStruct; break;
+            case '@':
+            {
+                if (len == 2 && *(typeEncoding + 1) == '?')
+                {
+                    _encodingType = RFEncodingTypeBlock;
+                } else {
+                    _encodingType = RFEncodingTypeObject;
+                }
+            }
+                break;
+            default: _encodingType = RFEncodingTypeUnknown; break;
+        }
+        
+        if (_encodingType == RFEncodingTypeObject)
+        {
+            char *pTypeEncoding = (char *)typeEncoding;
+            pTypeEncoding = strstr(pTypeEncoding, "@\"");
+            if (pTypeEncoding)
+            {
+                pTypeEncoding += 2;
+                char *find = strstr(pTypeEncoding, "<");
+                if (!find)
+                {
+                    find = strstr(pTypeEncoding, "\"");
+                }
+                
+                if (find)
+                {
+                    size_t size = strlen(typeEncoding) + 1;
+                    char *buffer = malloc(size);
+                    memset(buffer, 0, size);
+                    
+                    size = (size_t)(find - pTypeEncoding);
+                    strncpy(buffer, pTypeEncoding,size);
+                    buffer[size] = 0;
+                    
+                    _typeName  = @(buffer);
+                    _typeClass = objc_getClass(buffer);
+                    
+                    NSMutableArray *protocols = [NSMutableArray array];
+                    
+                    pTypeEncoding = find;
+                    while (pTypeEncoding && (find = strstr(pTypeEncoding, ">")))
+                    {
+                        pTypeEncoding++;
+                        
+                        size = (size_t)(find - pTypeEncoding);
+                        strncpy(buffer, pTypeEncoding,size);
+                        buffer[size] = 0;
+                        
+                        if (strlen(buffer) > 0)
+                        {
+                            [protocols addObject:@(buffer)];
+                        }
+                        
+                        pTypeEncoding = strstr(pTypeEncoding + 1, "<");
+                    }
+                    
+                    if (protocols.count > 0)
+                    {
+                        _protocols = protocols;
+                    }
+                    
+                    free(buffer);
+                }
+            }
+        }
+    }
 }
 
-- (void)fillAttributeName {
-    NSString *attributeName = [[self class] propertyAttributeNameForField:"T" property:_property];
-    _typeName = [RFTypeDecoder nameFromTypeEncoding:attributeName];
-    _primitive = [RFTypeDecoder RF_isPrimitiveType:attributeName];
+- (void)fillProperty
+{
+    _typeClass         = nil;
+    _typeName          = nil;
+    _protocols         = nil;
+    _ivarName          = nil;
+    _typeEncoding      = nil;
+    _propertyName      = nil;
+    _encodingType      = RFEncodingTypeUnknown;
+    _encodingSpecifier = 0;
+
+    const char *propertyName = property_getName(_property);
+    if (propertyName)
+    {
+        _propertyName = [NSString stringWithUTF8String:propertyName];
+    }
     
-    _isAttributeNameFilled = YES;
+    unsigned int count = 0;
+    objc_property_attribute_t *attributes = property_copyAttributeList(_property, &count);
+    for (unsigned int index = 0; index < count; index++)
+    {
+        const char *typeName     = attributes[index].name;
+        const char *typeEncoding = attributes[index].value;
+        switch (typeName[0])
+        {
+            case 'T':
+            {
+                if (typeEncoding)
+                {
+                    [self fillTypesWithTypeEncoding:typeEncoding];
+                }
+            }
+                break;
+            case 'V':
+            {
+                if (typeEncoding)
+                {
+                    _ivarName = [NSString stringWithUTF8String:typeEncoding];
+                }
+            }
+                break;
+            case 'R':
+            {
+                _encodingSpecifier |= RFEncodingSpecifierReadonly;
+            }
+                break;
+            case 'C':
+            {
+                _encodingSpecifier |= RFEncodingSpecifierCopy;
+            }
+                break;
+            case '&':
+            {
+                _encodingSpecifier |= RFEncodingSpecifierRetain;
+            }
+                break;
+            case 'N':
+            {
+                _encodingSpecifier |= RFEncodingSpecifierNonatomic;
+            }
+                break;
+            case 'D':
+            {
+                _encodingSpecifier |= RFEncodingSpecifierDynamic;
+            }
+                break;
+            case 'W':
+            {
+                _encodingSpecifier |= RFEncodingSpecifierWeak;
+            }
+                break;
+            case 'G':
+            {
+                _encodingSpecifier |= RFEncodingSpecifierCustomGetter;
+                if (typeEncoding)
+                {
+                    _getter = NSSelectorFromString([NSString stringWithUTF8String:typeEncoding]);
+                }
+            }
+                break;
+            case 'S':
+            {
+                _encodingSpecifier |= RFEncodingSpecifierCustomSetter;
+                if (typeEncoding)
+                {
+                    _setter = NSSelectorFromString([NSString stringWithUTF8String:typeEncoding]);
+                }
+            }
+                break;
+            default: break;
+        }
+    }
+    
+    if (attributes)
+    {
+        free(attributes);
+    }
+    
+    if (_propertyName.length > 0)
+    {
+        if (!_getter)
+        {
+            _getter = NSSelectorFromString(_propertyName);
+        }
+        
+        if (!_setter)
+        {
+            _setter = NSSelectorFromString([NSString stringWithFormat:@"set%@%@:", [_propertyName substringToIndex:1].uppercaseString, [_propertyName substringFromIndex:1]]);
+        }
+    }
+}
+
+- (void)fillAttributes
+{
+    NSString *selectName = [NSString stringWithFormat:@"RF_attributes_%@_property_%@", self.className, self.propertyName];
+    
+    SEL select = NSSelectorFromString(selectName);
+    if ([self.hostClass respondsToSelector:select])
+    {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+        self.attributes = [self.hostClass performSelector:select];
+#pragma clang diagnostic pop
+    }
 }
 
 - (NSString *)description {

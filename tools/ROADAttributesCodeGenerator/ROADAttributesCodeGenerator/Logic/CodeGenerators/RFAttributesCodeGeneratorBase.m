@@ -53,52 +53,52 @@
     }
     
     if ([result length] > 0) {
-        [result appendLine:[self generateFactoryCodeForModelsList:modelsList]];
+        //[result appendLine:[self generateFactoryCodeForModelsList:modelsList]];
         [self decorateSectionIn:result];
     }
 
     return result;
 }
 
-+ (NSMutableString *)generateFactoryCodeForModelsList:(NSArray *)modelsList {
-    NSMutableString *result = [NSMutableString new];
-    
-    if ([modelsList count] == 0) {
-        return result;
-    }
-    
-    NSString *factoryName = [self factoryName];
-    NSString *factoryDictionaryHolderName = [NSString stringWithFormat:@"attributes%@%@Dict", [self modelHolderName:[modelsList lastObject]], [self factoryName]];
-    
-    [result appendFormat:@"+ (NSMutableDictionary *)RF_attributes%@ {\n", factoryName];
-    [result appendFormat:@"    NSMutableDictionary *%@ = [RFAttributeCacheManager objectForKey:@\"RF%@%@\"];\n", factoryDictionaryHolderName, [self modelHolderName:[modelsList lastObject]], factoryName];
-    [result appendFormat:@"    if (%@ != nil) {\n", factoryDictionaryHolderName];
-    [result appendFormat:@"        return %@;\n", factoryDictionaryHolderName];
-    [result appendLine:@"    }"];
-    [result appendLine:@"    "];
-    [result appendFormat:@"    NSMutableDictionary *dictionaryHolder = [super RF_attributes%@];\n", factoryName];
-    [result appendLine:@"    "];
-    [result appendLine:@"    if (!dictionaryHolder) {"];
-    [result appendLine:@"        dictionaryHolder = [NSMutableDictionary dictionary];"];
-    [result appendFormat:@"        [RFAttributeCacheManager setObject:dictionaryHolder forKey:@\"RF%@%@\"];\n", [self modelHolderName:[modelsList lastObject]], factoryName];
-    [result appendLine:@"    }"];
-    [result appendLine:@"    "];
-    
-    for (RFAnnotatedElementModel *currentModel in modelsList) {
-        if ([currentModel.attributeModels.attributeModels count] == 0) {
-            continue;
-        }
-        
-        [result appendFormat:@"    [dictionaryHolder setObject:[self RF_invocationForSelector:@selector(%@)] forKey:@\"%@\"];\n", [self listCreatorName:currentModel], currentModel.name];
-    }
-    
-    [result appendFormat:@"    %@ = dictionaryHolder;  \n", factoryDictionaryHolderName];
-    [result appendLine:@"    "];
-    [result appendFormat:@"    return %@;\n", factoryDictionaryHolderName];
-    [result appendLine:@"}"];
-    
-    return result;
-}
+//+ (NSMutableString *)generateFactoryCodeForModelsList:(NSArray *)modelsList {
+//    NSMutableString *result = [NSMutableString new];
+//    
+//    if ([modelsList count] == 0) {
+//        return result;
+//    }
+//    
+//    NSString *factoryName = [self factoryName];
+//    NSString *factoryDictionaryHolderName = [NSString stringWithFormat:@"attributes%@%@Dict", [self modelHolderName:[modelsList lastObject]], [self factoryName]];
+//    
+//    [result appendFormat:@"+ (NSMutableDictionary *)RF_attributes%@ {\n", factoryName];
+//    [result appendFormat:@"    NSMutableDictionary *%@ = [RFAttributeCacheManager objectForKey:@\"RF%@%@\"];\n", factoryDictionaryHolderName, [self modelHolderName:[modelsList lastObject]], factoryName];
+//    [result appendFormat:@"    if (%@ != nil) {\n", factoryDictionaryHolderName];
+//    [result appendFormat:@"        return %@;\n", factoryDictionaryHolderName];
+//    [result appendLine:@"    }"];
+//    [result appendLine:@"    "];
+//    [result appendFormat:@"    NSMutableDictionary *dictionaryHolder = [super RF_attributes%@];\n", factoryName];
+//    [result appendLine:@"    "];
+//    [result appendLine:@"    if (!dictionaryHolder) {"];
+//    [result appendLine:@"        dictionaryHolder = [NSMutableDictionary dictionary];"];
+//    [result appendFormat:@"        [RFAttributeCacheManager setObject:dictionaryHolder forKey:@\"RF%@%@\"];\n", [self modelHolderName:[modelsList lastObject]], factoryName];
+//    [result appendLine:@"    }"];
+//    [result appendLine:@"    "];
+//    
+//    for (RFAnnotatedElementModel *currentModel in modelsList) {
+//        if ([currentModel.attributeModels.attributeModels count] == 0) {
+//            continue;
+//        }
+//        
+//        [result appendFormat:@"    [dictionaryHolder setObject:[self RF_invocationForSelector:@selector(%@)] forKey:@\"%@\"];\n", [self listCreatorName:currentModel], currentModel.name];
+//    }
+//    
+//    [result appendFormat:@"    %@ = dictionaryHolder;  \n", factoryDictionaryHolderName];
+//    [result appendLine:@"    "];
+//    [result appendFormat:@"    return %@;\n", factoryDictionaryHolderName];
+//    [result appendLine:@"}"];
+//    
+//    return result;
+//}
 
 + (NSMutableString *)generateCodeForModel:(RFAnnotatedElementModel *)model {
     NSMutableString *result = [NSMutableString new];
@@ -115,23 +115,23 @@
 }
 
 + (void)writeMethodBodyTo:(NSMutableString *)result forModel:(RFAnnotatedElementModel *)model {
-    NSString *listHolderName = [self listHolderName:model];
+    //NSString *listHolderName = [self listHolderName:model];
     NSString *listCreatorName = [self listCreatorName:model];
-    NSString *cacheKey = [listHolderName stringByReplacingOccurrencesOfString:@"RF_attributes_list" withString:@"RFAL"];
+    //NSString *cacheKey = [listHolderName stringByReplacingOccurrencesOfString:@"RF_attributes_list" withString:@"RFAL"];
     
     [result appendFormat:@"+ (NSArray *)%@ {\n", listCreatorName];
-    [result appendFormat:@"    NSMutableArray *%@ = [RFAttributeCacheManager objectForKey:@\"%@\"];\n", listHolderName, cacheKey];
-    [result appendFormat:@"    if (%@ != nil) {\n", listHolderName];
-    [result appendFormat:@"        return %@;\n", listHolderName];
-    [result appendLine:@"    }"];
-    [result appendLine:@"    "];
+//    [result appendFormat:@"    NSMutableArray *%@ = [RFAttributeCacheManager objectForKey:@\"%@\"];\n", listHolderName, cacheKey];
+//    [result appendFormat:@"    if (%@ != nil) {\n", listHolderName];
+//    [result appendFormat:@"        return %@;\n", listHolderName];
+//    [result appendLine:@"    }"];
+//    [result appendLine:@"    "];
     [result appendFormat:@"    NSMutableArray *attributesArray = [NSMutableArray arrayWithCapacity:%ld];\n", (unsigned long)[model.attributeModels.attributeModels count]];
     [result appendLine:@"    "];
     [result appendString:[self generateAttributesCreatingBodyForModels:model.attributeModels]];
-    [result appendFormat:@"    %@ = attributesArray;\n", listHolderName];
-    [result appendFormat:@"    [RFAttributeCacheManager setObject:attributesArray forKey:@\"%@\"];\n", cacheKey];
-    [result appendLine:@"    "];
-    [result appendFormat:@"    return %@;\n", listHolderName];
+//    [result appendFormat:@"    %@ = attributesArray;\n", listHolderName];
+//    [result appendFormat:@"    [RFAttributeCacheManager setObject:attributesArray forKey:@\"%@\"];\n", cacheKey];
+//    [result appendLine:@"    "];
+    [result appendLine:@"    return attributesArray;\n"];
     [result appendLine:@"}"];
 }
 

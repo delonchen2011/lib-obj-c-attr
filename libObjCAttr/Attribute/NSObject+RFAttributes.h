@@ -40,82 +40,22 @@
 @interface NSObject (RFAttributes)
 
 /**
- * The method returns an array of attributes declared for method.
- * @param methodName Name of method whose attributes are needed.
- * @return An array of attributes.
- */
-+ (NSArray *)RF_attributesForMethod:(NSString *)methodName;
-
-/**
- * The method returns an array of attributes declared for property.
- * @param propertyName Name of property whose attributes are needed.
- * @return An array of attributes.
- */
-+ (NSArray *)RF_attributesForProperty:(NSString *)propertyName;
-
-/**
- * The method returns an array of attributes declared for instance variable.
- * @param ivarName Name of instance variable whose attributes are needed.
- * @return An array of attributes.
- */
-+ (NSArray *)RF_attributesForIvar:(NSString *)ivarName;
-
-/**
  * The method returns an array of attributes declared for class.
  * @return An array of attributes.
  */
 + (NSArray *)RF_attributesForClass;
 
 /**
- * The method performs search for attribute of required class in array of attributes declared for method.
- * @param methodName Name of method.
+ * The method performs search for attribute of required class in array of attributes declared for Class.
  * @param requiredClassOfAttribute Class of required attribute.
  * @return An object of attribute. Or nil if attribute was not found.
  */
-+ (id)RF_attributeForMethod:(NSString *)methodName withAttributeType:(Class)requiredClassOfAttribute;
++ (id)attributeWithType:(Class)requiredClassOfAttribute;
 
 /**
- * The method performs search for attribute of required class in array of attributes declared for property.
- * @param propertyName Name of property.
- * @param requiredClassOfAttribute Class of required attribute.
+ * The method performs search for attribute of required class in array of attributes declared for Protocol.
+ * @param requiredProtocolOfAttribute Protocol of required attribute.
  * @return An object of attribute. Or nil if attribute was not found.
  */
-+ (id)RF_attributeForProperty:(NSString *)propertyName withAttributeType:(Class)requiredClassOfAttribute;
-
-/**
- * The method performs search for attribute of required class in array of attributes declared for instance variable.
- * @param ivarName Name of instance variable.
- * @param requiredClassOfAttribute Class of required attribute.
- *  @return An object of attribute. Or nil if attribute was not found.
- */
-+ (id)RF_attributeForIvar:(NSString *)ivarName withAttributeType:(Class)requiredClassOfAttribute;
-
-/**
- * The method performs search for attribute of required class in array of attributes declared for class.
- * @param requiredClassOfAttribute Class of required attribute.
- * @return An object of attribute. Or nil if attribute was not found.
- */
-+ (id)RF_attributeForClassWithAttributeType:(Class)requiredClassOfAttribute;
-
-/**
- * The method returns an array of object's properties where was declared attribute of required class.
- * @param requiredClassOfAttribute Class of required attribute.
- * @return An array of properties.
- */
-+ (NSArray *)RF_propertiesWithAttributeType:(Class)requiredClassOfAttribute;
-
-/**
- * The method returns an array of object's instance variables where was declared attribute of required class.
- * @param requiredClassOfAttribute Class of required attribute.
- * @return An array of instance variables.
- */
-+ (NSArray *)RF_ivarsWithAttributeType:(Class)requiredClassOfAttribute;
-
-/**
- * The method returns an array of object's methods where was declared attribute of required class.
- * @param requiredClassOfAttribute Class of required attribute.
- * @return An array of methods.
- */
-+ (NSArray *)RF_methodsWithAttributeType:(Class)requiredClassOfAttribute;
-
++ (id)attributeWithProtocol:(Protocol *)requiredProtocolOfAttribute;
 @end

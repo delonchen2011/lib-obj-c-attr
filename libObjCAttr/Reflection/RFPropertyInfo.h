@@ -35,6 +35,51 @@
 
 
 /**
+ Property encoding types
+ */
+typedef NS_ENUM(NSUInteger, RFEncodingType)
+{
+    RFEncodingTypeUnknown    = 0, ///< unknown
+    RFEncodingTypeVoid       = 1, ///< void
+    RFEncodingTypeBool       = 2, ///< bool
+    RFEncodingTypeInt8       = 3, ///< char / BOOL
+    RFEncodingTypeUInt8      = 4, ///< unsigned char
+    RFEncodingTypeInt16      = 5, ///< short
+    RFEncodingTypeUInt16     = 6, ///< unsigned short
+    RFEncodingTypeInt32      = 7, ///< int
+    RFEncodingTypeUInt32     = 8, ///< unsigned int
+    RFEncodingTypeInt64      = 9, ///< long long
+    RFEncodingTypeUInt64     = 10, ///< unsigned long long
+    RFEncodingTypeFloat      = 11, ///< float
+    RFEncodingTypeDouble     = 12, ///< double
+    RFEncodingTypeLongDouble = 13, ///< long double
+    RFEncodingTypeObject     = 14, ///< id
+    RFEncodingTypeClass      = 15, ///< Class
+    RFEncodingTypeSEL        = 16, ///< SEL
+    RFEncodingTypeBlock      = 17, ///< block
+    RFEncodingTypePointer    = 18, ///< void*
+    RFEncodingTypeStruct     = 19, ///< struct
+    RFEncodingTypeUnion      = 20, ///< union
+    RFEncodingTypeCString    = 21, ///< char*
+    RFEncodingTypeCArray     = 22, ///< char[10] (for example)
+};
+
+/**
+ Property encoding specifier
+ */
+typedef NS_OPTIONS(NSUInteger, RFEncodingSpecifier)
+{
+    RFEncodingSpecifierReadonly     = 1 << 0, ///< readonly
+    RFEncodingSpecifierCopy         = 1 << 1, ///< copy
+    RFEncodingSpecifierRetain       = 1 << 2, ///< retain
+    RFEncodingSpecifierNonatomic    = 1 << 3, ///< nonatomic
+    RFEncodingSpecifierWeak         = 1 << 4, ///< weak
+    RFEncodingSpecifierCustomGetter = 1 << 5, ///< getter=
+    RFEncodingSpecifierCustomSetter = 1 << 6, ///< setter=
+    RFEncodingSpecifierDynamic      = 1 << 7, ///< @dynamic
+};
+
+/**
  * Contains information about a declared property.
  */
 @interface RFPropertyInfo : NSObject
@@ -55,54 +100,10 @@
 @property (readonly, nonatomic) Class hostClass;
 
 /**
- * The name of the class or variable type of the property declaration.
+ * The type name.
+ * For primitive types this is Nil.
  */
 @property (readonly, nonatomic) NSString *typeName;
-
-/**
- * The name of the setter method.
- */
-@property (readonly, nonatomic) NSString *setterName;
-
-/**
- * The name of the getter method.
- */
-@property (readonly, nonatomic) NSString *getterName;
-
-/**
- * Boolean property telling whether the property's implementatin is done via the @dynamic directive.
- */
-@property (readonly, nonatomic, getter = isDynamic) BOOL dynamic;
-
-/**
- * Boolean property telling whether the property is weak.
- */
-@property (readonly, nonatomic, getter = isWeak) BOOL weak;
-
-/**
- * Boolean property telling whether the property is nonatomic.
- */
-@property (readonly, nonatomic, getter = isNonatomic) BOOL nonatomic;
-
-/**
- * Boolean property telling whether the property is strong.
- */
-@property (readonly, nonatomic, getter = isStrong) BOOL strong;
-
-/**
- * Boolean property telling whether the property is readonly.
- */
-@property (readonly, nonatomic, getter = isReadonly) BOOL readonly;
-
-/**
- * Boolean property telling whether the property is copying.
- */
-@property (readonly, nonatomic, getter = isCopied) BOOL copied;
-
-/**
- * Boolean property telling whether the property is pointing to an object instead of a primitive value.
- */
-@property (readonly, nonatomic, getter = isPrimitive) BOOL primitive;
 
 /**
  * The declared class of the property if applicable.
@@ -111,9 +112,44 @@
 @property (readonly, nonatomic) Class typeClass;
 
 /**
+ * Return the property type encoding.
+ */
+@property (readonly, nonatomic) NSString *typeEncoding;
+
+/**
+ * The name of the setter method.
+ */
+@property (readonly, nonatomic) SEL setter;
+
+/**
+ * The name of the getter method.
+ */
+@property (readonly, nonatomic) SEL getter;
+
+/**
+ * Return ivarName.
+ */
+@property (readonly, nonatomic) NSString *ivarName;
+
+/**
+ * Return encoding type.
+ */
+@property (readonly, nonatomic) RFEncodingType encodingType;
+
+/**
+ * Return encoding specifier.
+ */
+@property (readonly, nonatomic) RFEncodingSpecifier encodingSpecifier;
+
+/**
  * An array of attributes declared for property.
  */
 @property (readonly, nonatomic) NSArray *attributes;
+
+/**
+ * Custom Tag
+ */
+@property(nonatomic,assign) NSInteger tag;
 
 /**
  * Returns an array of info objects for the given class.
@@ -153,5 +189,12 @@
  * @return An object of attribute. Or nil if attribute was not found.
  */
 - (id)attributeWithType:(Class)requiredClassOfAttribute;
+
+/**
+ * The method performs search for attribute of required protocol in array of attributes declared for property.
+ * @param requiredProtocolOfAttribute Protocol of required attribute.
+ * @return An object of attribute. Or nil if attribute was not found.
+ */
+- (id)attributeWithProtocol:(Protocol *)requiredProtocolOfAttribute;
 
 @end

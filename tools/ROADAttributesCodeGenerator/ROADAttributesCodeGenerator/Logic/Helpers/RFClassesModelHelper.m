@@ -35,8 +35,6 @@
 #import "NSString+RFExtendedAPI.h"
 
 #import "RFClassModel.h"
-#import "RFMethodModel.h"
-#import "RFFieldModel.h"
 #import "RFPropertyModel.h"
 
 
@@ -67,75 +65,13 @@
     [currentClassModel1.attributeModels addAttributeModelsFromContainer:classModelToMerge.attributeModels];
     [currentClassModel1.filesToImport unionSet:classModelToMerge.filesToImport];
     
-    [self mergeFieldsToClassModel:currentClassModel1 fromClassModel:classModelToMerge];
     [self mergePropertiesToClassModel:currentClassModel1 fromClassModel:classModelToMerge];
-    [self mergeMethodsToClassModel:currentClassModel1 fromClassModel:classModelToMerge];
 }
 
 + (RFClassModel *)findClassByName:(NSString *)name inModel:(NSMutableArray *)classesModel {
     for (RFClassModel *currentClassModel in classesModel) {
         if ([currentClassModel.name isEqualToString:name]) {
             return currentClassModel;
-        }
-    }
-    
-    return nil;
-}
-
-+ (void)mergeMethodsToClassModel:(RFClassModel *)toModel fromClassModel:(RFClassModel *)fromModel {
-    
-    for (RFMethodModel *currentMethodModel2 in fromModel.methodsList) {
-        
-        RFMethodModel *currentMethodModel1 = [self findMethodByName:currentMethodModel2.name andParametersCount:currentMethodModel2.parametersCount inModel:toModel.methodsList];
-        
-        if (currentMethodModel1 == nil) {
-            
-            currentMethodModel2.holder = toModel;
-            [toModel.methodsList addObject:currentMethodModel2];
-            
-            continue;
-        }
-        
-        [currentMethodModel1.attributeModels addAttributeModelsFromContainer:currentMethodModel2.attributeModels];
-    }
-}
-
-+ (RFMethodModel *)findMethodByName:(NSString *)name andParametersCount:(NSUInteger)parametersCount inModel:(NSMutableArray *)methodsModel {
-    for (RFMethodModel *currentMethodModel in methodsModel) {
-        if (![currentMethodModel.name isEqualToString:name]) {
-            continue;
-        }
-        
-        if (currentMethodModel.parametersCount == parametersCount) {
-            return currentMethodModel;
-        }
-    }
-    
-    return nil;
-}
-
-+ (void)mergeFieldsToClassModel:(RFClassModel *)toModel fromClassModel:(RFClassModel *)fromModel {
-    
-    for (RFFieldModel *currentFieldModel2 in fromModel.fieldsList) {
-        
-        RFFieldModel *currentFieldModel1 = [self findFieldByName:currentFieldModel2.name inModel:toModel.fieldsList];
-        
-        if (currentFieldModel1 == nil) {
-            
-            currentFieldModel2.holder = toModel;
-            [toModel.fieldsList addObject:currentFieldModel2];
-            
-            continue;
-        }
-        
-        [currentFieldModel1.attributeModels addAttributeModelsFromContainer:currentFieldModel2.attributeModels];
-    }
-}
-
-+ (RFFieldModel *)findFieldByName:(NSString *)name inModel:(NSMutableArray *)fieldsModel {
-    for (RFFieldModel *currentFieldModel in fieldsModel) {
-        if ([currentFieldModel.name isEqualToString:name]) {
-            return currentFieldModel;
         }
     }
     

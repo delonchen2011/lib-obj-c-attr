@@ -34,9 +34,7 @@
 #import "RFClassAttributesCodeGenerator.h"
 
 #import "NSMutableString+RFExtendedAPI.h"
-#import "RFMethodsAttributesCodeGenerator.h"
 #import "RFPropertiesAttributesCodeGenerator.h"
-#import "RFFieldsAttributesCodeGenerator.h"
 #import "RFClassModel.h"
 
 
@@ -45,9 +43,7 @@
 + (NSString *)generateCodeForClassModel:(RFClassModel *)classModel {
     NSMutableString *result = [NSMutableString new];
     
-    [result appendLine:[RFFieldsAttributesCodeGenerator generateCodeForModelsList:classModel.fieldsList]];
     [result appendLine:[RFPropertiesAttributesCodeGenerator generateCodeForModelsList:classModel.propertiesList]];
-    [result appendLine:[RFMethodsAttributesCodeGenerator generateCodeForModelsList:classModel.methodsList]];
     
     if ([classModel.attributeModels.attributeModels count] > 0) {
         NSMutableString *classAttrCode = [self generateCodeForModel:classModel];

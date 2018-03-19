@@ -34,11 +34,7 @@
 #ifndef ROADReflection_ROADReflection_h
 #define ROADReflection_ROADReflection_h
 
-#import "NSObject+RFMemberVariableReflection.h"
-#import "NSObject+RFMethodReflection.h"
 #import "NSObject+RFPropertyReflection.h"
-#import "RFIvarInfo.h"
-#import "RFMethodInfo.h"
 #import "RFPropertyInfo.h"
 
 #endif

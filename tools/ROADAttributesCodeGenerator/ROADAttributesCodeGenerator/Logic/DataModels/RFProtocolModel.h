@@ -31,7 +31,7 @@
 //  for additional information regarding copyright ownership and licensing
 
 
-#import "RFMethodModel.h"
+#import "RFAnnotatedElementModel.h"
 
 
 @interface RFProtocolModel : RFAnnotatedElementModel

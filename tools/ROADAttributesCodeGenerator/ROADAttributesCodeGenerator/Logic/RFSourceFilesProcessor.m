@@ -105,8 +105,6 @@
 + (void)generateCodeCollectorIntoPath:(NSString *)targetPath fromClassModels:(RFClassModelsContainer *)classesInfoContainer {
     NSMutableString *collectorCode = [NSMutableString new];
     
-    [collectorCode appendString:@"#import <ROAD/NSObject+RFAttributesInternal.h>\n\n"];
-    
     for (RFClassModel *currentClassModel in classesInfoContainer.classModels) {
         if (!currentClassModel.hasGeneratedCode) {
             continue;

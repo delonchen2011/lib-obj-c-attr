@@ -41,15 +41,11 @@
 #import "RFClassModelsContainer.h"
 #import "RFClassParser.h"
 #import "RFClassModel.h"
-#import "RFMethodParser.h"
-#import "RFMethodModel.h"
 #import "RFProtocolModelsContainer.h"
 #import "RFProtocolParser.h"
 #import "RFAttributeDataParser.h"
 #import "RFPropertyParser.h"
 #import "RFPropertyModel.h"
-#import "RFFieldParser.h"
-#import "RFFieldModel.h"
 #import "RFMetaMarkersContainer.h"
 #import "RFPreprocessedSourceCode.h"
 
@@ -107,7 +103,7 @@ NSRegularExpression *keyWordRegex = nil;
     
     if (parseState.isFieldMode) {
         [self setupEndOfProtocol:parseState];
-        [self processFieldWithCodeParseState:parseState];
+        //[self processFieldWithCodeParseState:parseState];
         return;
     }
     
@@ -139,12 +135,12 @@ NSRegularExpression *keyWordRegex = nil;
     }
     
     if ([keyWord hasPrefix:@"-"] || [keyWord hasPrefix:@"+"]) {
-        [self processMethodWithCodeParseState:parseState andKeyword:keyWord];
+        //[self processMethodWithCodeParseState:parseState andKeyword:keyWord];
         return;
     }
     
     if ([keyWord hasPrefix:@"%"]) {
-        [self processFieldsBlockWithCodeParseState:parseState andKeyword:keyWord];
+        //[self processFieldsBlockWithCodeParseState:parseState andKeyword:keyWord];
         return;
     }
     
@@ -232,71 +228,71 @@ NSRegularExpression *keyWordRegex = nil;
     }
 }
 
-+ (void)processMethodWithCodeParseState:(RFCodeParseState *)parseState andKeyword:(NSString *)keyWord {
-    RFMethodModel *parsedMethod = [RFMethodParser parseFrom:parseState forKeyWord:keyWord];
-    
-    parsedMethod.attributeModels = parseState.currentAttributesList;
-    parseState.currentAttributesList = [[RFAttributeModelsContainer alloc] init];
-    
-    if ((parseState.currentClass == nil && !parseState.isProtocolMode) || (parseState.currentProtocol == nil && parseState.isProtocolMode)) {
-        return;
-    }
-    
-    if (parseState.isProtocolMode) {
-        parsedMethod.holder = parseState.currentProtocol;
-        [parseState.currentProtocol.methodsList addObject:parsedMethod];
-    } else {
-        parsedMethod.holder = parseState.currentClass;
-        [parseState.currentClass.methodsList addObject:parsedMethod];
-    }
-}
+//+ (void)processMethodWithCodeParseState:(RFCodeParseState *)parseState andKeyword:(NSString *)keyWord {
+//    RFMethodModel *parsedMethod = [RFMethodParser parseFrom:parseState forKeyWord:keyWord];
+//    
+//    parsedMethod.attributeModels = parseState.currentAttributesList;
+//    parseState.currentAttributesList = [[RFAttributeModelsContainer alloc] init];
+//    
+//    if ((parseState.currentClass == nil && !parseState.isProtocolMode) || (parseState.currentProtocol == nil && parseState.isProtocolMode)) {
+//        return;
+//    }
+//    
+//    if (parseState.isProtocolMode) {
+//        parsedMethod.holder = parseState.currentProtocol;
+//        [parseState.currentProtocol.methodsList addObject:parsedMethod];
+//    } else {
+//        parsedMethod.holder = parseState.currentClass;
+//        [parseState.currentClass.methodsList addObject:parsedMethod];
+//    }
+//}
 
-+ (void)processFieldsBlockWithCodeParseState:(RFCodeParseState *)parseState andKeyword:(NSString *)keyWord {
-    if (![RFMetaMarkersContainer isMetaMarker:keyWord hasType:MetaMarkerDataTypeCode]) {
-        return;
-    }
-    
-    NSString *fieldsBlock = [parseState.sourceCodeInfo.metaMarkers dataForMetaMarker:keyWord];
-    if (fieldsBlock == nil) {
-        return;
-    }
-    
-    RFPreprocessedSourceCode *fieldsCodeInfo = [RFPreprocessedSourceCode new];
-    fieldsCodeInfo.sourceCode = [NSMutableString stringWithString:fieldsBlock];
-    [RFSourceCodePreprocessor normalizeText:fieldsCodeInfo];
-    
-    NSMutableString *mainWorkCodeBuffer = parseState.workCodeBuffer;
-    
-    parseState.workCodeBuffer = fieldsCodeInfo.sourceCode;
-    parseState.isFieldMode = YES;
-    
-    for (;;) {
-        NSString *keyWord = [self extractKeyWordFromBuffer:parseState.workCodeBuffer];
-        
-        if (keyWord == nil) {
-            break;
-        }
-        
-        [self processKeyWord:keyWord withCodeParseState:parseState];
-    }
-    
-    parseState.workCodeBuffer = mainWorkCodeBuffer;
-    parseState.isFieldMode = NO;
-}
-
-+ (void)processFieldWithCodeParseState:(RFCodeParseState *)parseState {
-    if (parseState.currentClass == nil) {
-        return;
-    }
-    
-    RFFieldModel *parsedField = [RFFieldParser parseFrom:parseState];
-        
-    parsedField.attributeModels = parseState.currentAttributesList;
-    parseState.currentAttributesList = [[RFAttributeModelsContainer alloc] init];
-    
-    parsedField.holder = parseState.currentClass;
-    [parseState.currentClass.fieldsList addObject:parsedField];
-}
+//+ (void)processFieldsBlockWithCodeParseState:(RFCodeParseState *)parseState andKeyword:(NSString *)keyWord {
+//    if (![RFMetaMarkersContainer isMetaMarker:keyWord hasType:MetaMarkerDataTypeCode]) {
+//        return;
+//    }
+//    
+//    NSString *fieldsBlock = [parseState.sourceCodeInfo.metaMarkers dataForMetaMarker:keyWord];
+//    if (fieldsBlock == nil) {
+//        return;
+//    }
+//    
+//    RFPreprocessedSourceCode *fieldsCodeInfo = [RFPreprocessedSourceCode new];
+//    fieldsCodeInfo.sourceCode = [NSMutableString stringWithString:fieldsBlock];
+//    [RFSourceCodePreprocessor normalizeText:fieldsCodeInfo];
+//    
+//    NSMutableString *mainWorkCodeBuffer = parseState.workCodeBuffer;
+//    
+//    parseState.workCodeBuffer = fieldsCodeInfo.sourceCode;
+//    parseState.isFieldMode = YES;
+//    
+//    for (;;) {
+//        NSString *keyWord = [self extractKeyWordFromBuffer:parseState.workCodeBuffer];
+//        
+//        if (keyWord == nil) {
+//            break;
+//        }
+//        
+//        [self processKeyWord:keyWord withCodeParseState:parseState];
+//    }
+//    
+//    parseState.workCodeBuffer = mainWorkCodeBuffer;
+//    parseState.isFieldMode = NO;
+//}
+//
+//+ (void)processFieldWithCodeParseState:(RFCodeParseState *)parseState {
+//    if (parseState.currentClass == nil) {
+//        return;
+//    }
+//    
+//    RFFieldModel *parsedField = [RFFieldParser parseFrom:parseState];
+//        
+//    parsedField.attributeModels = parseState.currentAttributesList;
+//    parseState.currentAttributesList = [[RFAttributeModelsContainer alloc] init];
+//    
+//    parsedField.holder = parseState.currentClass;
+//    [parseState.currentClass.fieldsList addObject:parsedField];
+//}
 
 NSRegularExpression *importFileRegex = nil;
 

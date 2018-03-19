@@ -21,15 +21,11 @@
 		119CF58D1971CBFF00A70999 /* NSFileManager+RFExtendedAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB3AACC17B1DABB006421E0 /* NSFileManager+RFExtendedAPI.m */; };
 		119CF58E1971CBFF00A70999 /* RFAttributesCodeGeneratorBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C19517B1C3C000B00CAA /* RFAttributesCodeGeneratorBase.m */; };
 		119CF58F1971CBFF00A70999 /* RFClassAttributesCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C19717B1C3C000B00CAA /* RFClassAttributesCodeGenerator.m */; };
-		119CF5901971CBFF00A70999 /* RFFieldsAttributesCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C19917B1C3C000B00CAA /* RFFieldsAttributesCodeGenerator.m */; };
 		119CF5911971CBFF00A70999 /* RFMainAttributesCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C19B17B1C3C000B00CAA /* RFMainAttributesCodeGenerator.m */; };
-		119CF5921971CBFF00A70999 /* RFMethodsAttributesCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C19D17B1C3C000B00CAA /* RFMethodsAttributesCodeGenerator.m */; };
 		119CF5931971CBFF00A70999 /* RFPropertiesAttributesCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C19F17B1C3C000B00CAA /* RFPropertiesAttributesCodeGenerator.m */; };
 		119CF5941971CBFF00A70999 /* RFAttributeDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C1A217B1C3C000B00CAA /* RFAttributeDataParser.m */; };
 		119CF5951971CBFF00A70999 /* RFClassParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C1A417B1C3C000B00CAA /* RFClassParser.m */; };
-		119CF5961971CBFF00A70999 /* RFFieldParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C1A617B1C3C000B00CAA /* RFFieldParser.m */; };
 		119CF5971971CBFF00A70999 /* RFHeaderSectionParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C1A817B1C3C000B00CAA /* RFHeaderSectionParser.m */; };
-		119CF5981971CBFF00A70999 /* RFMethodParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C1AA17B1C3C000B00CAA /* RFMethodParser.m */; };
 		119CF5991971CBFF00A70999 /* RFPropertyParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C1AC17B1C3C000B00CAA /* RFPropertyParser.m */; };
 		119CF59A1971CBFF00A70999 /* RFProtocolParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB240618168829007CC865 /* RFProtocolParser.m */; };
 		119CF59B1971CBFF00A70999 /* RFDefineParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 117641DB18F5B05E00B1688B /* RFDefineParser.m */; };
@@ -44,8 +40,6 @@
 		119CF5A41971CBFF00A70999 /* RFAttributeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C1BD17B1C3C000B00CAA /* RFAttributeModel.m */; };
 		119CF5A51971CBFF00A70999 /* RFClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C1BF17B1C3C000B00CAA /* RFClassModel.m */; };
 		119CF5A61971CBFF00A70999 /* RFCodeParseState.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C1C117B1C3C000B00CAA /* RFCodeParseState.m */; };
-		119CF5A71971CBFF00A70999 /* RFFieldModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C1C317B1C3C000B00CAA /* RFFieldModel.m */; };
-		119CF5A81971CBFF00A70999 /* RFMethodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C1C517B1C3C000B00CAA /* RFMethodModel.m */; };
 		119CF5A91971CBFF00A70999 /* RFPreprocessedSourceCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C1C717B1C3C000B00CAA /* RFPreprocessedSourceCode.m */; };
 		119CF5AA1971CBFF00A70999 /* RFPropertyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C1C917B1C3C000B00CAA /* RFPropertyModel.m */; };
 		119CF5AB1971CBFF00A70999 /* RFProtocolModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB2403181687D7007CC865 /* RFProtocolModel.m */; };
@@ -69,15 +63,11 @@
 		8DD9C1D617B1C3C000B00CAA /* RFTextFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C18D17B1C3C000B00CAA /* RFTextFile.m */; };
 		8DD9C1D917B1C3C000B00CAA /* RFAttributesCodeGeneratorBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C19517B1C3C000B00CAA /* RFAttributesCodeGeneratorBase.m */; };
 		8DD9C1DA17B1C3C000B00CAA /* RFClassAttributesCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C19717B1C3C000B00CAA /* RFClassAttributesCodeGenerator.m */; };
-		8DD9C1DB17B1C3C000B00CAA /* RFFieldsAttributesCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C19917B1C3C000B00CAA /* RFFieldsAttributesCodeGenerator.m */; };
 		8DD9C1DC17B1C3C000B00CAA /* RFMainAttributesCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C19B17B1C3C000B00CAA /* RFMainAttributesCodeGenerator.m */; };
-		8DD9C1DD17B1C3C000B00CAA /* RFMethodsAttributesCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C19D17B1C3C000B00CAA /* RFMethodsAttributesCodeGenerator.m */; };
 		8DD9C1DE17B1C3C000B00CAA /* RFPropertiesAttributesCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C19F17B1C3C000B00CAA /* RFPropertiesAttributesCodeGenerator.m */; };
 		8DD9C1DF17B1C3C000B00CAA /* RFAttributeDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C1A217B1C3C000B00CAA /* RFAttributeDataParser.m */; };
 		8DD9C1E017B1C3C000B00CAA /* RFClassParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C1A417B1C3C000B00CAA /* RFClassParser.m */; };
-		8DD9C1E117B1C3C000B00CAA /* RFFieldParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C1A617B1C3C000B00CAA /* RFFieldParser.m */; };
 		8DD9C1E217B1C3C000B00CAA /* RFHeaderSectionParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C1A817B1C3C000B00CAA /* RFHeaderSectionParser.m */; };
-		8DD9C1E317B1C3C000B00CAA /* RFMethodParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C1AA17B1C3C000B00CAA /* RFMethodParser.m */; };
 		8DD9C1E417B1C3C000B00CAA /* RFPropertyParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C1AC17B1C3C000B00CAA /* RFPropertyParser.m */; };
 		8DD9C1E517B1C3C000B00CAA /* RFSourceCodePreprocessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C1AF17B1C3C000B00CAA /* RFSourceCodePreprocessor.m */; };
 		8DD9C1E617B1C3C000B00CAA /* RFUserSourceCodeConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C1B117B1C3C000B00CAA /* RFUserSourceCodeConfigurator.m */; };
@@ -88,8 +78,6 @@
 		8DD9C1EB17B1C3C000B00CAA /* RFAttributeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C1BD17B1C3C000B00CAA /* RFAttributeModel.m */; };
 		8DD9C1EC17B1C3C000B00CAA /* RFClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C1BF17B1C3C000B00CAA /* RFClassModel.m */; };
 		8DD9C1ED17B1C3C000B00CAA /* RFCodeParseState.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C1C117B1C3C000B00CAA /* RFCodeParseState.m */; };
-		8DD9C1EE17B1C3C000B00CAA /* RFFieldModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C1C317B1C3C000B00CAA /* RFFieldModel.m */; };
-		8DD9C1EF17B1C3C000B00CAA /* RFMethodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C1C517B1C3C000B00CAA /* RFMethodModel.m */; };
 		8DD9C1F017B1C3C000B00CAA /* RFPreprocessedSourceCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C1C717B1C3C000B00CAA /* RFPreprocessedSourceCode.m */; };
 		8DD9C1F117B1C3C000B00CAA /* RFPropertyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C1C917B1C3C000B00CAA /* RFPropertyModel.m */; };
 		8DD9C1F217B1C3C000B00CAA /* RFClassesModelHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD9C1CC17B1C3C000B00CAA /* RFClassesModelHelper.m */; };
@@ -162,24 +150,16 @@
 		8DD9C19517B1C3C000B00CAA /* RFAttributesCodeGeneratorBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RFAttributesCodeGeneratorBase.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8DD9C19617B1C3C000B00CAA /* RFClassAttributesCodeGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFClassAttributesCodeGenerator.h; sourceTree = "<group>"; };
 		8DD9C19717B1C3C000B00CAA /* RFClassAttributesCodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RFClassAttributesCodeGenerator.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		8DD9C19817B1C3C000B00CAA /* RFFieldsAttributesCodeGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFFieldsAttributesCodeGenerator.h; sourceTree = "<group>"; };
-		8DD9C19917B1C3C000B00CAA /* RFFieldsAttributesCodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFFieldsAttributesCodeGenerator.m; sourceTree = "<group>"; };
 		8DD9C19A17B1C3C000B00CAA /* RFMainAttributesCodeGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFMainAttributesCodeGenerator.h; sourceTree = "<group>"; };
 		8DD9C19B17B1C3C000B00CAA /* RFMainAttributesCodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RFMainAttributesCodeGenerator.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		8DD9C19C17B1C3C000B00CAA /* RFMethodsAttributesCodeGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFMethodsAttributesCodeGenerator.h; sourceTree = "<group>"; };
-		8DD9C19D17B1C3C000B00CAA /* RFMethodsAttributesCodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFMethodsAttributesCodeGenerator.m; sourceTree = "<group>"; };
 		8DD9C19E17B1C3C000B00CAA /* RFPropertiesAttributesCodeGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFPropertiesAttributesCodeGenerator.h; sourceTree = "<group>"; };
 		8DD9C19F17B1C3C000B00CAA /* RFPropertiesAttributesCodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFPropertiesAttributesCodeGenerator.m; sourceTree = "<group>"; };
 		8DD9C1A117B1C3C000B00CAA /* RFAttributeDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFAttributeDataParser.h; sourceTree = "<group>"; };
 		8DD9C1A217B1C3C000B00CAA /* RFAttributeDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFAttributeDataParser.m; sourceTree = "<group>"; };
 		8DD9C1A317B1C3C000B00CAA /* RFClassParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFClassParser.h; sourceTree = "<group>"; };
 		8DD9C1A417B1C3C000B00CAA /* RFClassParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFClassParser.m; sourceTree = "<group>"; };
-		8DD9C1A517B1C3C000B00CAA /* RFFieldParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFFieldParser.h; sourceTree = "<group>"; };
-		8DD9C1A617B1C3C000B00CAA /* RFFieldParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFFieldParser.m; sourceTree = "<group>"; };
 		8DD9C1A717B1C3C000B00CAA /* RFHeaderSectionParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFHeaderSectionParser.h; sourceTree = "<group>"; };
 		8DD9C1A817B1C3C000B00CAA /* RFHeaderSectionParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFHeaderSectionParser.m; sourceTree = "<group>"; };
-		8DD9C1A917B1C3C000B00CAA /* RFMethodParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFMethodParser.h; sourceTree = "<group>"; };
-		8DD9C1AA17B1C3C000B00CAA /* RFMethodParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFMethodParser.m; sourceTree = "<group>"; };
 		8DD9C1AB17B1C3C000B00CAA /* RFPropertyParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFPropertyParser.h; sourceTree = "<group>"; };
 		8DD9C1AC17B1C3C000B00CAA /* RFPropertyParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFPropertyParser.m; sourceTree = "<group>"; };
 		8DD9C1AE17B1C3C000B00CAA /* RFSourceCodePreprocessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSourceCodePreprocessor.h; sourceTree = "<group>"; };
@@ -200,10 +180,6 @@
 		8DD9C1BF17B1C3C000B00CAA /* RFClassModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFClassModel.m; sourceTree = "<group>"; };
 		8DD9C1C017B1C3C000B00CAA /* RFCodeParseState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFCodeParseState.h; sourceTree = "<group>"; };
 		8DD9C1C117B1C3C000B00CAA /* RFCodeParseState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFCodeParseState.m; sourceTree = "<group>"; };
-		8DD9C1C217B1C3C000B00CAA /* RFFieldModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFFieldModel.h; sourceTree = "<group>"; };
-		8DD9C1C317B1C3C000B00CAA /* RFFieldModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFFieldModel.m; sourceTree = "<group>"; };
-		8DD9C1C417B1C3C000B00CAA /* RFMethodModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFMethodModel.h; sourceTree = "<group>"; };
-		8DD9C1C517B1C3C000B00CAA /* RFMethodModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFMethodModel.m; sourceTree = "<group>"; };
 		8DD9C1C617B1C3C000B00CAA /* RFPreprocessedSourceCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFPreprocessedSourceCode.h; sourceTree = "<group>"; };
 		8DD9C1C717B1C3C000B00CAA /* RFPreprocessedSourceCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFPreprocessedSourceCode.m; sourceTree = "<group>"; };
 		8DD9C1C817B1C3C000B00CAA /* RFPropertyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFPropertyModel.h; sourceTree = "<group>"; };
@@ -349,14 +325,10 @@
 			children = (
 				8DD9C19417B1C3C000B00CAA /* RFAttributesCodeGeneratorBase.h */,
 				8DD9C19517B1C3C000B00CAA /* RFAttributesCodeGeneratorBase.m */,
-				8DD9C19617B1C3C000B00CAA /* RFClassAttributesCodeGenerator.h */,
 				8DD9C19717B1C3C000B00CAA /* RFClassAttributesCodeGenerator.m */,
-				8DD9C19817B1C3C000B00CAA /* RFFieldsAttributesCodeGenerator.h */,
-				8DD9C19917B1C3C000B00CAA /* RFFieldsAttributesCodeGenerator.m */,
+				8DD9C19617B1C3C000B00CAA /* RFClassAttributesCodeGenerator.h */,
 				8DD9C19A17B1C3C000B00CAA /* RFMainAttributesCodeGenerator.h */,
 				8DD9C19B17B1C3C000B00CAA /* RFMainAttributesCodeGenerator.m */,
-				8DD9C19C17B1C3C000B00CAA /* RFMethodsAttributesCodeGenerator.h */,
-				8DD9C19D17B1C3C000B00CAA /* RFMethodsAttributesCodeGenerator.m */,
 				8DD9C19E17B1C3C000B00CAA /* RFPropertiesAttributesCodeGenerator.h */,
 				8DD9C19F17B1C3C000B00CAA /* RFPropertiesAttributesCodeGenerator.m */,
 			);
@@ -370,12 +342,8 @@
 				8DD9C1A217B1C3C000B00CAA /* RFAttributeDataParser.m */,
 				8DD9C1A317B1C3C000B00CAA /* RFClassParser.h */,
 				8DD9C1A417B1C3C000B00CAA /* RFClassParser.m */,
-				8DD9C1A517B1C3C000B00CAA /* RFFieldParser.h */,
-				8DD9C1A617B1C3C000B00CAA /* RFFieldParser.m */,
 				8DD9C1A717B1C3C000B00CAA /* RFHeaderSectionParser.h */,
 				8DD9C1A817B1C3C000B00CAA /* RFHeaderSectionParser.m */,
-				8DD9C1A917B1C3C000B00CAA /* RFMethodParser.h */,
-				8DD9C1AA17B1C3C000B00CAA /* RFMethodParser.m */,
 				8DD9C1AB17B1C3C000B00CAA /* RFPropertyParser.h */,
 				8DD9C1AC17B1C3C000B00CAA /* RFPropertyParser.m */,
 				1AAB240518168829007CC865 /* RFProtocolParser.h */,
@@ -425,10 +393,6 @@
 				8DD9C1BF17B1C3C000B00CAA /* RFClassModel.m */,
 				8DD9C1C017B1C3C000B00CAA /* RFCodeParseState.h */,
 				8DD9C1C117B1C3C000B00CAA /* RFCodeParseState.m */,
-				8DD9C1C217B1C3C000B00CAA /* RFFieldModel.h */,
-				8DD9C1C317B1C3C000B00CAA /* RFFieldModel.m */,
-				8DD9C1C417B1C3C000B00CAA /* RFMethodModel.h */,
-				8DD9C1C517B1C3C000B00CAA /* RFMethodModel.m */,
 				8DD9C1C617B1C3C000B00CAA /* RFPreprocessedSourceCode.h */,
 				8DD9C1C717B1C3C000B00CAA /* RFPreprocessedSourceCode.m */,
 				8DD9C1C817B1C3C000B00CAA /* RFPropertyModel.h */,
@@ -563,15 +527,11 @@
 				119CF58D1971CBFF00A70999 /* NSFileManager+RFExtendedAPI.m in Sources */,
 				119CF58E1971CBFF00A70999 /* RFAttributesCodeGeneratorBase.m in Sources */,
 				119CF58F1971CBFF00A70999 /* RFClassAttributesCodeGenerator.m in Sources */,
-				119CF5901971CBFF00A70999 /* RFFieldsAttributesCodeGenerator.m in Sources */,
 				119CF5911971CBFF00A70999 /* RFMainAttributesCodeGenerator.m in Sources */,
-				119CF5921971CBFF00A70999 /* RFMethodsAttributesCodeGenerator.m in Sources */,
 				119CF5931971CBFF00A70999 /* RFPropertiesAttributesCodeGenerator.m in Sources */,
 				119CF5941971CBFF00A70999 /* RFAttributeDataParser.m in Sources */,
 				119CF5951971CBFF00A70999 /* RFClassParser.m in Sources */,
-				119CF5961971CBFF00A70999 /* RFFieldParser.m in Sources */,
 				119CF5971971CBFF00A70999 /* RFHeaderSectionParser.m in Sources */,
-				119CF5981971CBFF00A70999 /* RFMethodParser.m in Sources */,
 				119CF5991971CBFF00A70999 /* RFPropertyParser.m in Sources */,
 				119CF59A1971CBFF00A70999 /* RFProtocolParser.m in Sources */,
 				119CF59B1971CBFF00A70999 /* RFDefineParser.m in Sources */,
@@ -586,8 +546,6 @@
 				119CF5A41971CBFF00A70999 /* RFAttributeModel.m in Sources */,
 				119CF5A51971CBFF00A70999 /* RFClassModel.m in Sources */,
 				119CF5A61971CBFF00A70999 /* RFCodeParseState.m in Sources */,
-				119CF5A71971CBFF00A70999 /* RFFieldModel.m in Sources */,
-				119CF5A81971CBFF00A70999 /* RFMethodModel.m in Sources */,
 				119CF5A91971CBFF00A70999 /* RFPreprocessedSourceCode.m in Sources */,
 				119CF5AA1971CBFF00A70999 /* RFPropertyModel.m in Sources */,
 				119CF5AB1971CBFF00A70999 /* RFProtocolModel.m in Sources */,
@@ -613,16 +571,12 @@
 				8DD9C1D617B1C3C000B00CAA /* RFTextFile.m in Sources */,
 				8DD9C1D917B1C3C000B00CAA /* RFAttributesCodeGeneratorBase.m in Sources */,
 				8DD9C1DA17B1C3C000B00CAA /* RFClassAttributesCodeGenerator.m in Sources */,
-				8DD9C1DB17B1C3C000B00CAA /* RFFieldsAttributesCodeGenerator.m in Sources */,
 				8DD9C1DC17B1C3C000B00CAA /* RFMainAttributesCodeGenerator.m in Sources */,
-				8DD9C1DD17B1C3C000B00CAA /* RFMethodsAttributesCodeGenerator.m in Sources */,
 				8DD9C1DE17B1C3C000B00CAA /* RFPropertiesAttributesCodeGenerator.m in Sources */,
 				8DD9C1DF17B1C3C000B00CAA /* RFAttributeDataParser.m in Sources */,
 				8DD9C1E017B1C3C000B00CAA /* RFClassParser.m in Sources */,
 				117641DF18F5CB7000B1688B /* RFDefineModel.m in Sources */,
-				8DD9C1E117B1C3C000B00CAA /* RFFieldParser.m in Sources */,
 				8DD9C1E217B1C3C000B00CAA /* RFHeaderSectionParser.m in Sources */,
-				8DD9C1E317B1C3C000B00CAA /* RFMethodParser.m in Sources */,
 				1AAB2404181687D7007CC865 /* RFProtocolModel.m in Sources */,
 				8DD9C1E417B1C3C000B00CAA /* RFPropertyParser.m in Sources */,
 				8DD9C1E517B1C3C000B00CAA /* RFSourceCodePreprocessor.m in Sources */,
@@ -637,8 +591,6 @@
 				1AAB240718168829007CC865 /* RFProtocolParser.m in Sources */,
 				8DD9C1ED17B1C3C000B00CAA /* RFCodeParseState.m in Sources */,
 				1A8A2E9918190FD300877EE0 /* RFProtocolsModelHelper.m in Sources */,
-				8DD9C1EE17B1C3C000B00CAA /* RFFieldModel.m in Sources */,
-				8DD9C1EF17B1C3C000B00CAA /* RFMethodModel.m in Sources */,
 				8DD9C1F017B1C3C000B00CAA /* RFPreprocessedSourceCode.m in Sources */,
 				8DD9C1F117B1C3C000B00CAA /* RFPropertyModel.m in Sources */,
 				8DD9C1F217B1C3C000B00CAA /* RFClassesModelHelper.m in Sources */,
@@ -814,6 +766,7 @@
 				119CF5831971C98500A70999 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8DD9C16E17B1C2BC00B00CAA /* Build configuration list for PBXProject "ROADAttributesCodeGenerator" */ = {
 			isa = XCConfigurationList;

@@ -93,7 +93,6 @@ class ROADConfigurator
                     end
                 end
                 run_script_user += " -dst=\"${SRCROOT}/${TARGET_NAME}/ROADGeneratedAttributes/\""
-                ROADConfigurator::add_script_to_project_targets(run_script_user, 'libObjCAttr - generate attributes', user_project, user_targets)
             end
         end
     end

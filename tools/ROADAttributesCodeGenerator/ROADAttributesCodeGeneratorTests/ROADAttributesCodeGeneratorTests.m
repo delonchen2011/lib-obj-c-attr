@@ -8,10 +8,7 @@
 
 
 #import <XCTest/XCTest.h>
-
-#import "RFMethodParser.h"
 #import "RFCodeParseState.h"
-#import "RFMethodModel.h"
 
 
 @interface ROADAttributesCodeGeneratorTests : XCTestCase
@@ -21,16 +18,16 @@
 @implementation ROADAttributesCodeGeneratorTests
 
 
-- (void)testWrongParametersInMethods
-{
-    RFCodeParseState *codeState = [[RFCodeParseState alloc] init];
-    codeState.workCodeBuffer = [[NSMutableString alloc] initWithString:@" @end "];
-
-    RFMethodModel *model = [RFMethodParser parseFrom:codeState forKeyWord:@"+ (EPAppDelegate*)appDelegate"];
-
-    XCTAssertEqual(model.parametersCount, 0, @"Wrong parameter cound");
-    XCTAssertEqualObjects(model.name, @"appDelegate", @"Wrong parsed name");
-    XCTAssertEqualObjects(model.attributeModels.attributeModels, @[], @"Wrong attribute models");
-}
+//- (void)testWrongParametersInMethods
+//{
+//    RFCodeParseState *codeState = [[RFCodeParseState alloc] init];
+//    codeState.workCodeBuffer = [[NSMutableString alloc] initWithString:@" @end "];
+//
+//    RFMethodModel *model = [RFMethodParser parseFrom:codeState forKeyWord:@"+ (EPAppDelegate*)appDelegate"];
+//
+//    XCTAssertEqual(model.parametersCount, 0, @"Wrong parameter cound");
+//    XCTAssertEqualObjects(model.name, @"appDelegate", @"Wrong parsed name");
+//    XCTAssertEqualObjects(model.attributeModels.attributeModels, @[], @"Wrong attribute models");
+//}
 
 @end

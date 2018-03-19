@@ -35,7 +35,6 @@
 
 #import "NSString+RFExtendedAPI.h"
 #import "RFProtocolModel.h"
-#import "RFMethodModel.h"
 #import "RFPropertyModel.h"
 
 
@@ -67,45 +66,12 @@
     [currentProtocolModel1.filesToImport unionSet:protocolModelToMerge.filesToImport];
     
     [self mergePropertiesToProtocolModel:currentProtocolModel1 fromProtocolModel:protocolModelToMerge];
-    [self mergeMethodsToProtocolModel:currentProtocolModel1 fromProtocolModel:protocolModelToMerge];
 }
 
 + (RFProtocolModel *)findProtocolByName:(NSString *)name inModel:(NSMutableArray *)protocolsModel {
     for (RFProtocolModel *currentProtocolModel in protocolsModel) {
         if ([currentProtocolModel.name isEqualToString:name]) {
             return currentProtocolModel;
-        }
-    }
-    
-    return nil;
-}
-
-+ (void)mergeMethodsToProtocolModel:(RFProtocolModel *)toModel fromProtocolModel:(RFProtocolModel *)fromModel {
-    
-    for (RFMethodModel *currentMethodModel2 in fromModel.methodsList) {
-        
-        RFMethodModel *currentMethodModel1 = [self findMethodByName:currentMethodModel2.name andParametersCount:currentMethodModel2.parametersCount inModel:toModel.methodsList];
-        
-        if (currentMethodModel1 == nil) {
-            
-            currentMethodModel2.holder = toModel;
-            [toModel.methodsList addObject:currentMethodModel2];
-            
-            continue;
-        }
-        
-        [currentMethodModel1.attributeModels addAttributeModelsFromContainer:currentMethodModel2.attributeModels];
-    }
-}
-
-+ (RFMethodModel *)findMethodByName:(NSString *)name andParametersCount:(NSUInteger)parametersCount inModel:(NSMutableArray *)methodsModel {
-    for (RFMethodModel *currentMethodModel in methodsModel) {
-        if (![currentMethodModel.name isEqualToString:name]) {
-            continue;
-        }
-        
-        if (currentMethodModel.parametersCount == parametersCount) {
-            return currentMethodModel;
         }
     }
     

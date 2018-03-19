@@ -7,95 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04F7B2181F458470001BA18B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F7B2171F458470001BA18B /* XCTest.framework */; };
+		04F7B21B1F458BAE001BA18B /* RFPropertyInfoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F7B21A1F458BAE001BA18B /* RFPropertyInfoTest.m */; };
 		11146D1718FC37BE00DD4C3D /* NSObject+RFAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A1818BE4BD500FE3414 /* NSObject+RFAttributes.m */; };
-		11146D1818FC37BE00DD4C3D /* NSObject+RFMethodReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A3818BE531E00FE3414 /* NSObject+RFMethodReflection.m */; };
-		11146D1918FC37BE00DD4C3D /* RFTypeDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A2618BE4BD500FE3414 /* RFTypeDecoder.m */; };
 		11146D1A18FC37BE00DD4C3D /* NSObject+RFPropertyReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A3D18BE533C00FE3414 /* NSObject+RFPropertyReflection.m */; };
-		11146D1B18FC37BE00DD4C3D /* NSObject+RFMemberVariableReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A3B18BE533C00FE3414 /* NSObject+RFMemberVariableReflection.m */; };
-		11146D1C18FC37BE00DD4C3D /* RFMethodInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A2218BE4BD500FE3414 /* RFMethodInfo.m */; };
-		11146D1D18FC37BE00DD4C3D /* NSInvocation+RFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A3218BE52EA00FE3414 /* NSInvocation+RFExtension.m */; };
-		11146D1E18FC37BE00DD4C3D /* RFIvarInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A2018BE4BD500FE3414 /* RFIvarInfo.m */; };
-		11146D1F18FC37BE00DD4C3D /* NSObject+RFAttributesInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A1A18BE4BD500FE3414 /* NSObject+RFAttributesInternal.m */; };
-		11146D2018FC37BE00DD4C3D /* RFAttributeCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A1C18BE4BD500FE3414 /* RFAttributeCacheManager.m */; };
 		11146D2118FC37BE00DD4C3D /* RFPropertyInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A2418BE4BD500FE3414 /* RFPropertyInfo.m */; };
-		11146D2218FC37BE00DD4C3D /* NSRegularExpression+RFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A3418BE52EA00FE3414 /* NSRegularExpression+RFExtension.m */; };
 		11146D2418FC37BE00DD4C3D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 119C19F018BE499800FE3414 /* Foundation.framework */; };
-		11146D2618FC37BE00DD4C3D /* RFEncoding.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 833F290F18C0B85200020123 /* RFEncoding.plist */; };
-		11146D2718FC37BE00DD4C3D /* NSInvocation+RFExtension.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 119C1A3118BE52EA00FE3414 /* NSInvocation+RFExtension.h */; };
-		11146D2818FC37BE00DD4C3D /* NSObject+RFMemberVariableReflection.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 119C1A3A18BE533C00FE3414 /* NSObject+RFMemberVariableReflection.h */; };
-		11146D2918FC37BE00DD4C3D /* NSObject+RFMethodReflection.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 119C1A3718BE531E00FE3414 /* NSObject+RFMethodReflection.h */; };
 		11146D2A18FC37BE00DD4C3D /* NSObject+RFPropertyReflection.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 119C1A3C18BE533C00FE3414 /* NSObject+RFPropertyReflection.h */; };
-		11146D2B18FC37BE00DD4C3D /* NSRegularExpression+RFExtension.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 119C1A3318BE52EA00FE3414 /* NSRegularExpression+RFExtension.h */; };
-		11146D2C18FC37BE00DD4C3D /* RFAttributeCacheManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 119C1A1B18BE4BD500FE3414 /* RFAttributeCacheManager.h */; };
-		11146D2D18FC37BE00DD4C3D /* RFIvarInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 119C1A1F18BE4BD500FE3414 /* RFIvarInfo.h */; };
-		11146D2E18FC37BE00DD4C3D /* RFMethodInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 119C1A2118BE4BD500FE3414 /* RFMethodInfo.h */; };
 		11146D2F18FC37BE00DD4C3D /* RFPropertyInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 119C1A2318BE4BD500FE3414 /* RFPropertyInfo.h */; };
-		11146D3018FC37BE00DD4C3D /* RFTypeDecoder.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 119C1A2518BE4BD500FE3414 /* RFTypeDecoder.h */; };
 		11146D3118FC37BE00DD4C3D /* ROADAttribute.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 119C1A2718BE4BD500FE3414 /* ROADAttribute.h */; };
 		11146D3218FC37BE00DD4C3D /* ROADReflection.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 119C1A2818BE4BD500FE3414 /* ROADReflection.h */; };
 		11146D3318FC37BE00DD4C3D /* NSObject+RFAttributes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 119C1A1718BE4BD500FE3414 /* NSObject+RFAttributes.h */; };
-		11146D3418FC37BE00DD4C3D /* NSObject+RFAttributesInternal.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 119C1A1918BE4BD500FE3414 /* NSObject+RFAttributesInternal.h */; };
 		11146D3F18FC38F100DD4C3D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11146D3E18FC38F100DD4C3D /* XCTest.framework */; };
-		11146D4F18FC393700DD4C3D /* ROADGeneratedAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A7F18BF33CA00FE3414 /* ROADGeneratedAttribute.m */; };
-		11146D5018FC393700DD4C3D /* AttributesAPITest.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A4D18BE698800FE3414 /* AttributesAPITest.m */; };
-		11146D5118FC393700DD4C3D /* AnnotatedClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A5018BE698800FE3414 /* AnnotatedClass.m */; };
-		11146D5218FC393700DD4C3D /* SecondAnnotatedClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A5A18BE698800FE3414 /* SecondAnnotatedClass.m */; };
-		11146D5318FC393700DD4C3D /* CustomRFTestAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A5218BE698800FE3414 /* CustomRFTestAttribute.m */; };
-		11146D5418FC393700DD4C3D /* RFTestAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A5418BE698800FE3414 /* RFTestAttribute.m */; };
-		11146D5518FC393700DD4C3D /* RFIvarInfoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A5E18BE698800FE3414 /* RFIvarInfoTest.m */; };
-		11146D5618FC393700DD4C3D /* RFMethodInfoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A6018BE698800FE3414 /* RFMethodInfoTest.m */; };
-		11146D5718FC393700DD4C3D /* RFPropertyInfoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A6218BE698800FE3414 /* RFPropertyInfoTest.m */; };
 		11146D5818FC3AEA00DD4C3D /* liblibObjCAttrMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11146D3818FC37BE00DD4C3D /* liblibObjCAttrMac.a */; };
 		11146D5E18FC3B6200DD4C3D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11146D5A18FC3B6200DD4C3D /* InfoPlist.strings */; };
-		11146D6118FC3ED500DD4C3D /* RFEncoding.plist in Resources */ = {isa = PBXBuildFile; fileRef = 833F290F18C0B85200020123 /* RFEncoding.plist */; };
-		1176414318E5EC0A00B1688B /* GcovTestObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 1176414218E5EC0A00B1688B /* GcovTestObserver.m */; };
 		119C19F118BE499800FE3414 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 119C19F018BE499800FE3414 /* Foundation.framework */; };
 		119C1A0018BE499800FE3414 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 119C19F018BE499800FE3414 /* Foundation.framework */; };
 		119C1A2918BE4BD500FE3414 /* NSObject+RFAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A1818BE4BD500FE3414 /* NSObject+RFAttributes.m */; };
-		119C1A2A18BE4BD500FE3414 /* NSObject+RFAttributesInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A1A18BE4BD500FE3414 /* NSObject+RFAttributesInternal.m */; };
-		119C1A2B18BE4BD500FE3414 /* RFAttributeCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A1C18BE4BD500FE3414 /* RFAttributeCacheManager.m */; };
-		119C1A2C18BE4BD500FE3414 /* RFIvarInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A2018BE4BD500FE3414 /* RFIvarInfo.m */; };
-		119C1A2D18BE4BD500FE3414 /* RFMethodInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A2218BE4BD500FE3414 /* RFMethodInfo.m */; };
 		119C1A2E18BE4BD500FE3414 /* RFPropertyInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A2418BE4BD500FE3414 /* RFPropertyInfo.m */; };
-		119C1A2F18BE4BD500FE3414 /* RFTypeDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A2618BE4BD500FE3414 /* RFTypeDecoder.m */; };
-		119C1A3518BE52EA00FE3414 /* NSInvocation+RFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A3218BE52EA00FE3414 /* NSInvocation+RFExtension.m */; };
-		119C1A3618BE52EA00FE3414 /* NSRegularExpression+RFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A3418BE52EA00FE3414 /* NSRegularExpression+RFExtension.m */; };
-		119C1A3918BE531E00FE3414 /* NSObject+RFMethodReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A3818BE531E00FE3414 /* NSObject+RFMethodReflection.m */; };
-		119C1A3E18BE533C00FE3414 /* NSObject+RFMemberVariableReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A3B18BE533C00FE3414 /* NSObject+RFMemberVariableReflection.m */; };
 		119C1A3F18BE533C00FE3414 /* NSObject+RFPropertyReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A3D18BE533C00FE3414 /* NSObject+RFPropertyReflection.m */; };
-		119C1A6718BE698800FE3414 /* AttributesAPITest.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A4D18BE698800FE3414 /* AttributesAPITest.m */; };
-		119C1A6818BE698800FE3414 /* AnnotatedClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A5018BE698800FE3414 /* AnnotatedClass.m */; };
-		119C1A6918BE698800FE3414 /* CustomRFTestAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A5218BE698800FE3414 /* CustomRFTestAttribute.m */; };
-		119C1A6A18BE698800FE3414 /* RFTestAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A5418BE698800FE3414 /* RFTestAttribute.m */; };
-		119C1A6E18BE698800FE3414 /* SecondAnnotatedClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A5A18BE698800FE3414 /* SecondAnnotatedClass.m */; };
-		119C1A6F18BE698800FE3414 /* RFIvarInfoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A5E18BE698800FE3414 /* RFIvarInfoTest.m */; };
-		119C1A7018BE698800FE3414 /* RFMethodInfoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A6018BE698800FE3414 /* RFMethodInfoTest.m */; };
-		119C1A7118BE698800FE3414 /* RFPropertyInfoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A6218BE698800FE3414 /* RFPropertyInfoTest.m */; };
-		119C1A8018BF33CA00FE3414 /* ROADGeneratedAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C1A7F18BF33CA00FE3414 /* ROADGeneratedAttribute.m */; };
-		119C1A8118BF343B00FE3414 /* NSObject+RFAttributesInternal.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 119C1A1918BE4BD500FE3414 /* NSObject+RFAttributesInternal.h */; };
 		119C1A8218BF345F00FE3414 /* NSObject+RFAttributes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 119C1A1718BE4BD500FE3414 /* NSObject+RFAttributes.h */; };
-		119C1A9E18BF661000FE3414 /* NSInvocation+RFExtension.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 119C1A3118BE52EA00FE3414 /* NSInvocation+RFExtension.h */; };
-		119C1A9F18BF661000FE3414 /* NSObject+RFMemberVariableReflection.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 119C1A3A18BE533C00FE3414 /* NSObject+RFMemberVariableReflection.h */; };
-		119C1AA018BF661000FE3414 /* NSObject+RFMethodReflection.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 119C1A3718BE531E00FE3414 /* NSObject+RFMethodReflection.h */; };
 		119C1AA118BF661000FE3414 /* NSObject+RFPropertyReflection.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 119C1A3C18BE533C00FE3414 /* NSObject+RFPropertyReflection.h */; };
-		119C1AA218BF661000FE3414 /* NSRegularExpression+RFExtension.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 119C1A3318BE52EA00FE3414 /* NSRegularExpression+RFExtension.h */; };
-		119C1AA318BF661000FE3414 /* RFAttributeCacheManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 119C1A1B18BE4BD500FE3414 /* RFAttributeCacheManager.h */; };
-		119C1AA418BF661000FE3414 /* RFIvarInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 119C1A1F18BE4BD500FE3414 /* RFIvarInfo.h */; };
-		119C1AA518BF661000FE3414 /* RFMethodInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 119C1A2118BE4BD500FE3414 /* RFMethodInfo.h */; };
 		119C1AA618BF661000FE3414 /* RFPropertyInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 119C1A2318BE4BD500FE3414 /* RFPropertyInfo.h */; };
-		119C1AA718BF661000FE3414 /* RFTypeDecoder.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 119C1A2518BE4BD500FE3414 /* RFTypeDecoder.h */; };
 		119C1AA818BF661000FE3414 /* ROADAttribute.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 119C1A2718BE4BD500FE3414 /* ROADAttribute.h */; };
 		119C1AA918BF661000FE3414 /* ROADReflection.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 119C1A2818BE4BD500FE3414 /* ROADReflection.h */; };
 		119C1AAB18BF6BDC00FE3414 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 119C1AAA18BF6BDC00FE3414 /* UIKit.framework */; };
 		119C1AAC18BF976800FE3414 /* libObjCAttr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 119C19ED18BE499800FE3414 /* libObjCAttr.a */; };
-		833F291018C0B86F00020123 /* RFEncoding.plist in Resources */ = {isa = PBXBuildFile; fileRef = 833F290F18C0B85200020123 /* RFEncoding.plist */; };
-		833F291118C0B87A00020123 /* RFEncoding.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 833F290F18C0B85200020123 /* RFEncoding.plist */; };
-		C458B6F41988E09E00E87CAE /* MultiLineStringPropertyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C458B6F31988E09E00E87CAE /* MultiLineStringPropertyTest.m */; };
-		C458B6F71988F00200E87CAE /* MultiLineAttributedClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C458B6F61988F00200E87CAE /* MultiLineAttributedClass.m */; };
-		C458B6FA1988F72000E87CAE /* MultiLineTestAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = C458B6F91988F72000E87CAE /* MultiLineTestAttribute.m */; };
-		C458B6FB198909CF00E87CAE /* MultiLineStringPropertyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C458B6F31988E09E00E87CAE /* MultiLineStringPropertyTest.m */; };
-		C458B6FC198909CF00E87CAE /* MultiLineAttributedClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C458B6F61988F00200E87CAE /* MultiLineAttributedClass.m */; };
-		C458B6FD198909CF00E87CAE /* MultiLineTestAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = C458B6F91988F72000E87CAE /* MultiLineTestAttribute.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,21 +59,11 @@
 			dstPath = include/ROAD;
 			dstSubfolderSpec = 16;
 			files = (
-				11146D2618FC37BE00DD4C3D /* RFEncoding.plist in CopyFiles */,
-				11146D2718FC37BE00DD4C3D /* NSInvocation+RFExtension.h in CopyFiles */,
-				11146D2818FC37BE00DD4C3D /* NSObject+RFMemberVariableReflection.h in CopyFiles */,
-				11146D2918FC37BE00DD4C3D /* NSObject+RFMethodReflection.h in CopyFiles */,
 				11146D2A18FC37BE00DD4C3D /* NSObject+RFPropertyReflection.h in CopyFiles */,
-				11146D2B18FC37BE00DD4C3D /* NSRegularExpression+RFExtension.h in CopyFiles */,
-				11146D2C18FC37BE00DD4C3D /* RFAttributeCacheManager.h in CopyFiles */,
-				11146D2D18FC37BE00DD4C3D /* RFIvarInfo.h in CopyFiles */,
-				11146D2E18FC37BE00DD4C3D /* RFMethodInfo.h in CopyFiles */,
 				11146D2F18FC37BE00DD4C3D /* RFPropertyInfo.h in CopyFiles */,
-				11146D3018FC37BE00DD4C3D /* RFTypeDecoder.h in CopyFiles */,
 				11146D3118FC37BE00DD4C3D /* ROADAttribute.h in CopyFiles */,
 				11146D3218FC37BE00DD4C3D /* ROADReflection.h in CopyFiles */,
 				11146D3318FC37BE00DD4C3D /* NSObject+RFAttributes.h in CopyFiles */,
-				11146D3418FC37BE00DD4C3D /* NSObject+RFAttributesInternal.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,85 +73,38 @@
 			dstPath = include/ROAD;
 			dstSubfolderSpec = 16;
 			files = (
-				833F291118C0B87A00020123 /* RFEncoding.plist in CopyFiles */,
-				119C1A9E18BF661000FE3414 /* NSInvocation+RFExtension.h in CopyFiles */,
-				119C1A9F18BF661000FE3414 /* NSObject+RFMemberVariableReflection.h in CopyFiles */,
-				119C1AA018BF661000FE3414 /* NSObject+RFMethodReflection.h in CopyFiles */,
 				119C1AA118BF661000FE3414 /* NSObject+RFPropertyReflection.h in CopyFiles */,
-				119C1AA218BF661000FE3414 /* NSRegularExpression+RFExtension.h in CopyFiles */,
-				119C1AA318BF661000FE3414 /* RFAttributeCacheManager.h in CopyFiles */,
-				119C1AA418BF661000FE3414 /* RFIvarInfo.h in CopyFiles */,
-				119C1AA518BF661000FE3414 /* RFMethodInfo.h in CopyFiles */,
 				119C1AA618BF661000FE3414 /* RFPropertyInfo.h in CopyFiles */,
-				119C1AA718BF661000FE3414 /* RFTypeDecoder.h in CopyFiles */,
 				119C1AA818BF661000FE3414 /* ROADAttribute.h in CopyFiles */,
 				119C1AA918BF661000FE3414 /* ROADReflection.h in CopyFiles */,
 				119C1A8218BF345F00FE3414 /* NSObject+RFAttributes.h in CopyFiles */,
-				119C1A8118BF343B00FE3414 /* NSObject+RFAttributesInternal.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04F7B2171F458470001BA18B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		04F7B21A1F458BAE001BA18B /* RFPropertyInfoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFPropertyInfoTest.m; sourceTree = "<group>"; };
 		11146D3818FC37BE00DD4C3D /* liblibObjCAttrMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibObjCAttrMac.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		11146D3D18FC38F100DD4C3D /* libObjCAttMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libObjCAttMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11146D3E18FC38F100DD4C3D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		11146D5B18FC3B6200DD4C3D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		11146D5C18FC3B6200DD4C3D /* libObjCAttMacTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "libObjCAttMacTests-Info.plist"; sourceTree = "<group>"; };
 		11146D5D18FC3B6200DD4C3D /* libObjCAttMacTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "libObjCAttMacTests-Prefix.pch"; sourceTree = "<group>"; };
-		1176414118E5EC0A00B1688B /* GcovTestObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GcovTestObserver.h; sourceTree = "<group>"; };
-		1176414218E5EC0A00B1688B /* GcovTestObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GcovTestObserver.m; sourceTree = "<group>"; };
 		119C19ED18BE499800FE3414 /* libObjCAttr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libObjCAttr.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		119C19F018BE499800FE3414 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		119C19F418BE499800FE3414 /* libObjCAttr-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libObjCAttr-Prefix.pch"; sourceTree = "<group>"; };
 		119C19FD18BE499800FE3414 /* libObjCAttrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libObjCAttrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		119C1A1718BE4BD500FE3414 /* NSObject+RFAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RFAttributes.h"; sourceTree = "<group>"; };
 		119C1A1818BE4BD500FE3414 /* NSObject+RFAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RFAttributes.m"; sourceTree = "<group>"; };
-		119C1A1918BE4BD500FE3414 /* NSObject+RFAttributesInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RFAttributesInternal.h"; sourceTree = "<group>"; };
-		119C1A1A18BE4BD500FE3414 /* NSObject+RFAttributesInternal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RFAttributesInternal.m"; sourceTree = "<group>"; };
-		119C1A1B18BE4BD500FE3414 /* RFAttributeCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFAttributeCacheManager.h; sourceTree = "<group>"; };
-		119C1A1C18BE4BD500FE3414 /* RFAttributeCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFAttributeCacheManager.m; sourceTree = "<group>"; };
-		119C1A1F18BE4BD500FE3414 /* RFIvarInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFIvarInfo.h; sourceTree = "<group>"; };
-		119C1A2018BE4BD500FE3414 /* RFIvarInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFIvarInfo.m; sourceTree = "<group>"; };
-		119C1A2118BE4BD500FE3414 /* RFMethodInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFMethodInfo.h; sourceTree = "<group>"; };
-		119C1A2218BE4BD500FE3414 /* RFMethodInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFMethodInfo.m; sourceTree = "<group>"; };
 		119C1A2318BE4BD500FE3414 /* RFPropertyInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFPropertyInfo.h; sourceTree = "<group>"; };
 		119C1A2418BE4BD500FE3414 /* RFPropertyInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFPropertyInfo.m; sourceTree = "<group>"; };
-		119C1A2518BE4BD500FE3414 /* RFTypeDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFTypeDecoder.h; sourceTree = "<group>"; };
-		119C1A2618BE4BD500FE3414 /* RFTypeDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFTypeDecoder.m; sourceTree = "<group>"; };
 		119C1A2718BE4BD500FE3414 /* ROADAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROADAttribute.h; sourceTree = "<group>"; };
 		119C1A2818BE4BD500FE3414 /* ROADReflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROADReflection.h; sourceTree = "<group>"; };
-		119C1A3118BE52EA00FE3414 /* NSInvocation+RFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+RFExtension.h"; sourceTree = "<group>"; };
-		119C1A3218BE52EA00FE3414 /* NSInvocation+RFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+RFExtension.m"; sourceTree = "<group>"; };
-		119C1A3318BE52EA00FE3414 /* NSRegularExpression+RFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSRegularExpression+RFExtension.h"; sourceTree = "<group>"; };
-		119C1A3418BE52EA00FE3414 /* NSRegularExpression+RFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRegularExpression+RFExtension.m"; sourceTree = "<group>"; };
-		119C1A3718BE531E00FE3414 /* NSObject+RFMethodReflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RFMethodReflection.h"; sourceTree = "<group>"; };
-		119C1A3818BE531E00FE3414 /* NSObject+RFMethodReflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RFMethodReflection.m"; sourceTree = "<group>"; };
-		119C1A3A18BE533C00FE3414 /* NSObject+RFMemberVariableReflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RFMemberVariableReflection.h"; sourceTree = "<group>"; };
-		119C1A3B18BE533C00FE3414 /* NSObject+RFMemberVariableReflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RFMemberVariableReflection.m"; sourceTree = "<group>"; };
 		119C1A3C18BE533C00FE3414 /* NSObject+RFPropertyReflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RFPropertyReflection.h"; sourceTree = "<group>"; };
 		119C1A3D18BE533C00FE3414 /* NSObject+RFPropertyReflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RFPropertyReflection.m"; sourceTree = "<group>"; };
-		119C1A4D18BE698800FE3414 /* AttributesAPITest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributesAPITest.m; sourceTree = "<group>"; };
-		119C1A4F18BE698800FE3414 /* AnnotatedClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnotatedClass.h; sourceTree = "<group>"; };
-		119C1A5018BE698800FE3414 /* AnnotatedClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnotatedClass.m; sourceTree = "<group>"; };
-		119C1A5118BE698800FE3414 /* CustomRFTestAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomRFTestAttribute.h; sourceTree = "<group>"; };
-		119C1A5218BE698800FE3414 /* CustomRFTestAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomRFTestAttribute.m; sourceTree = "<group>"; };
-		119C1A5318BE698800FE3414 /* RFTestAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFTestAttribute.h; sourceTree = "<group>"; };
-		119C1A5418BE698800FE3414 /* RFTestAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFTestAttribute.m; sourceTree = "<group>"; };
-		119C1A5918BE698800FE3414 /* SecondAnnotatedClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondAnnotatedClass.h; sourceTree = "<group>"; };
-		119C1A5A18BE698800FE3414 /* SecondAnnotatedClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondAnnotatedClass.m; sourceTree = "<group>"; };
-		119C1A5E18BE698800FE3414 /* RFIvarInfoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RFIvarInfoTest.m; path = Classes/RFIvarInfoTest.m; sourceTree = "<group>"; };
-		119C1A6018BE698800FE3414 /* RFMethodInfoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RFMethodInfoTest.m; path = Classes/RFMethodInfoTest.m; sourceTree = "<group>"; };
-		119C1A6218BE698800FE3414 /* RFPropertyInfoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RFPropertyInfoTest.m; path = Classes/RFPropertyInfoTest.m; sourceTree = "<group>"; };
-		119C1A7F18BF33CA00FE3414 /* ROADGeneratedAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROADGeneratedAttribute.m; sourceTree = "<group>"; };
 		119C1AAA18BF6BDC00FE3414 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		833F290F18C0B85200020123 /* RFEncoding.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RFEncoding.plist; sourceTree = "<group>"; };
-		C458B6F31988E09E00E87CAE /* MultiLineStringPropertyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiLineStringPropertyTest.m; sourceTree = "<group>"; };
-		C458B6F51988F00200E87CAE /* MultiLineAttributedClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiLineAttributedClass.h; sourceTree = "<group>"; };
-		C458B6F61988F00200E87CAE /* MultiLineAttributedClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiLineAttributedClass.m; sourceTree = "<group>"; };
-		C458B6F81988F72000E87CAE /* MultiLineTestAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiLineTestAttribute.h; sourceTree = "<group>"; };
-		C458B6F91988F72000E87CAE /* MultiLineTestAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiLineTestAttribute.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F7B2181F458470001BA18B /* XCTest.framework in Frameworks */,
 				119C1AAC18BF976800FE3414 /* libObjCAttr.a in Frameworks */,
 				119C1AAB18BF6BDC00FE3414 /* UIKit.framework in Frameworks */,
 				119C1A0018BE499800FE3414 /* Foundation.framework in Frameworks */,
@@ -269,6 +150,7 @@
 		11146D5918FC3B6200DD4C3D /* libObjCAttMacTests */ = {
 			isa = PBXGroup;
 			children = (
+				04F7B21A1F458BAE001BA18B /* RFPropertyInfoTest.m */,
 				11146D5A18FC3B6200DD4C3D /* InfoPlist.strings */,
 				11146D5C18FC3B6200DD4C3D /* libObjCAttMacTests-Info.plist */,
 				11146D5D18FC3B6200DD4C3D /* libObjCAttMacTests-Prefix.pch */,
@@ -301,6 +183,7 @@
 		119C19EF18BE499800FE3414 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04F7B2171F458470001BA18B /* XCTest.framework */,
 				119C1AAA18BF6BDC00FE3414 /* UIKit.framework */,
 				119C19F018BE499800FE3414 /* Foundation.framework */,
 				11146D3E18FC38F100DD4C3D /* XCTest.framework */,
@@ -333,11 +216,6 @@
 		119C1A0618BE499800FE3414 /* libObjCAttrTests */ = {
 			isa = PBXGroup;
 			children = (
-				1176414118E5EC0A00B1688B /* GcovTestObserver.h */,
-				1176414218E5EC0A00B1688B /* GcovTestObserver.m */,
-				119C1A7E18BF338700FE3414 /* ROADGeneratedAttributes */,
-				119C1A4B18BE698800FE3414 /* AttributeTest */,
-				119C1A5B18BE698800FE3414 /* ReflectionTest */,
 			);
 			path = libObjCAttrTests;
 			sourceTree = "<group>";
@@ -347,10 +225,6 @@
 			children = (
 				119C1A1718BE4BD500FE3414 /* NSObject+RFAttributes.h */,
 				119C1A1818BE4BD500FE3414 /* NSObject+RFAttributes.m */,
-				119C1A1918BE4BD500FE3414 /* NSObject+RFAttributesInternal.h */,
-				119C1A1A18BE4BD500FE3414 /* NSObject+RFAttributesInternal.m */,
-				119C1A1B18BE4BD500FE3414 /* RFAttributeCacheManager.h */,
-				119C1A1C18BE4BD500FE3414 /* RFAttributeCacheManager.m */,
 			);
 			path = Attribute;
 			sourceTree = "<group>";
@@ -358,14 +232,8 @@
 		119C1A1D18BE4BD500FE3414 /* Reflection */ = {
 			isa = PBXGroup;
 			children = (
-				119C1A1F18BE4BD500FE3414 /* RFIvarInfo.h */,
-				119C1A2018BE4BD500FE3414 /* RFIvarInfo.m */,
-				119C1A2118BE4BD500FE3414 /* RFMethodInfo.h */,
-				119C1A2218BE4BD500FE3414 /* RFMethodInfo.m */,
 				119C1A2318BE4BD500FE3414 /* RFPropertyInfo.h */,
 				119C1A2418BE4BD500FE3414 /* RFPropertyInfo.m */,
-				119C1A2518BE4BD500FE3414 /* RFTypeDecoder.h */,
-				119C1A2618BE4BD500FE3414 /* RFTypeDecoder.m */,
 			);
 			path = Reflection;
 			sourceTree = "<group>";
@@ -373,72 +241,15 @@
 		119C1A3018BE52EA00FE3414 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				119C1A3118BE52EA00FE3414 /* NSInvocation+RFExtension.h */,
-				119C1A3218BE52EA00FE3414 /* NSInvocation+RFExtension.m */,
-				119C1A3A18BE533C00FE3414 /* NSObject+RFMemberVariableReflection.h */,
-				119C1A3B18BE533C00FE3414 /* NSObject+RFMemberVariableReflection.m */,
-				119C1A3718BE531E00FE3414 /* NSObject+RFMethodReflection.h */,
-				119C1A3818BE531E00FE3414 /* NSObject+RFMethodReflection.m */,
 				119C1A3C18BE533C00FE3414 /* NSObject+RFPropertyReflection.h */,
 				119C1A3D18BE533C00FE3414 /* NSObject+RFPropertyReflection.m */,
-				119C1A3318BE52EA00FE3414 /* NSRegularExpression+RFExtension.h */,
-				119C1A3418BE52EA00FE3414 /* NSRegularExpression+RFExtension.m */,
 			);
 			path = Categories;
-			sourceTree = "<group>";
-		};
-		119C1A4B18BE698800FE3414 /* AttributeTest */ = {
-			isa = PBXGroup;
-			children = (
-				119C1A4D18BE698800FE3414 /* AttributesAPITest.m */,
-				C458B6F31988E09E00E87CAE /* MultiLineStringPropertyTest.m */,
-				119C1A4E18BE698800FE3414 /* Classes */,
-			);
-			path = AttributeTest;
-			sourceTree = "<group>";
-		};
-		119C1A4E18BE698800FE3414 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				119C1A4F18BE698800FE3414 /* AnnotatedClass.h */,
-				119C1A5018BE698800FE3414 /* AnnotatedClass.m */,
-				119C1A5118BE698800FE3414 /* CustomRFTestAttribute.h */,
-				119C1A5218BE698800FE3414 /* CustomRFTestAttribute.m */,
-				C458B6F51988F00200E87CAE /* MultiLineAttributedClass.h */,
-				C458B6F61988F00200E87CAE /* MultiLineAttributedClass.m */,
-				C458B6F81988F72000E87CAE /* MultiLineTestAttribute.h */,
-				C458B6F91988F72000E87CAE /* MultiLineTestAttribute.m */,
-				119C1A5318BE698800FE3414 /* RFTestAttribute.h */,
-				119C1A5418BE698800FE3414 /* RFTestAttribute.m */,
-				119C1A5918BE698800FE3414 /* SecondAnnotatedClass.h */,
-				119C1A5A18BE698800FE3414 /* SecondAnnotatedClass.m */,
-			);
-			name = Classes;
-			path = TestData;
-			sourceTree = "<group>";
-		};
-		119C1A5B18BE698800FE3414 /* ReflectionTest */ = {
-			isa = PBXGroup;
-			children = (
-				119C1A5E18BE698800FE3414 /* RFIvarInfoTest.m */,
-				119C1A6018BE698800FE3414 /* RFMethodInfoTest.m */,
-				119C1A6218BE698800FE3414 /* RFPropertyInfoTest.m */,
-			);
-			path = ReflectionTest;
-			sourceTree = "<group>";
-		};
-		119C1A7E18BF338700FE3414 /* ROADGeneratedAttributes */ = {
-			isa = PBXGroup;
-			children = (
-				119C1A7F18BF33CA00FE3414 /* ROADGeneratedAttribute.m */,
-			);
-			path = ROADGeneratedAttributes;
 			sourceTree = "<group>";
 		};
 		833F290E18C0B85200020123 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				833F290F18C0B85200020123 /* RFEncoding.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -503,7 +314,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 119C1A1318BE499800FE3414 /* Build configuration list for PBXNativeTarget "libObjCAttrTests" */;
 			buildPhases = (
-				119C1A7D18BF326E00FE3414 /* Generate attributes */,
 				119C19F918BE499800FE3414 /* Sources */,
 				119C19FA18BE499800FE3414 /* Frameworks */,
 				119C19FB18BE499800FE3414 /* Resources */,
@@ -529,7 +339,13 @@
 				ORGANIZATIONNAME = "Epam Systems";
 				TargetAttributes = {
 					11146D3C18FC38F100DD4C3D = {
+						DevelopmentTeam = EV9FR38NS9;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 11146D1518FC37BE00DD4C3D;
+					};
+					119C19FC18BE499800FE3414 = {
+						DevelopmentTeam = EV9FR38NS9;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -558,7 +374,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11146D6118FC3ED500DD4C3D /* RFEncoding.plist in Resources */,
 				11146D5E18FC3B6200DD4C3D /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -567,7 +382,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				833F291018C0B86F00020123 /* RFEncoding.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,21 +400,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/tools/binaries/ROADAttributesCodeGenerator\" -src=\"${SRCROOT}/libObjCAttrTests/\" -dst=\"${SRCROOT}/libObjCAttrTests/ROADGeneratedAttributes/\"";
-		};
-		119C1A7D18BF326E00FE3414 /* Generate attributes */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Generate attributes";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/tools/binaries/ROADAttributesCodeGenerator\" -src=\"${SRCROOT}/libObjCAttrTests/\" -dst=\"${SRCROOT}/libObjCAttrTests/ROADGeneratedAttributes/\"";
+			shellScript = "";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -610,17 +410,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				11146D1718FC37BE00DD4C3D /* NSObject+RFAttributes.m in Sources */,
-				11146D1818FC37BE00DD4C3D /* NSObject+RFMethodReflection.m in Sources */,
-				11146D1918FC37BE00DD4C3D /* RFTypeDecoder.m in Sources */,
 				11146D1A18FC37BE00DD4C3D /* NSObject+RFPropertyReflection.m in Sources */,
-				11146D1B18FC37BE00DD4C3D /* NSObject+RFMemberVariableReflection.m in Sources */,
-				11146D1C18FC37BE00DD4C3D /* RFMethodInfo.m in Sources */,
-				11146D1D18FC37BE00DD4C3D /* NSInvocation+RFExtension.m in Sources */,
-				11146D1E18FC37BE00DD4C3D /* RFIvarInfo.m in Sources */,
-				11146D1F18FC37BE00DD4C3D /* NSObject+RFAttributesInternal.m in Sources */,
-				11146D2018FC37BE00DD4C3D /* RFAttributeCacheManager.m in Sources */,
 				11146D2118FC37BE00DD4C3D /* RFPropertyInfo.m in Sources */,
-				11146D2218FC37BE00DD4C3D /* NSRegularExpression+RFExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,18 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C458B6FB198909CF00E87CAE /* MultiLineStringPropertyTest.m in Sources */,
-				C458B6FC198909CF00E87CAE /* MultiLineAttributedClass.m in Sources */,
-				C458B6FD198909CF00E87CAE /* MultiLineTestAttribute.m in Sources */,
-				11146D4F18FC393700DD4C3D /* ROADGeneratedAttribute.m in Sources */,
-				11146D5018FC393700DD4C3D /* AttributesAPITest.m in Sources */,
-				11146D5118FC393700DD4C3D /* AnnotatedClass.m in Sources */,
-				11146D5218FC393700DD4C3D /* SecondAnnotatedClass.m in Sources */,
-				11146D5318FC393700DD4C3D /* CustomRFTestAttribute.m in Sources */,
-				11146D5418FC393700DD4C3D /* RFTestAttribute.m in Sources */,
-				11146D5518FC393700DD4C3D /* RFIvarInfoTest.m in Sources */,
-				11146D5618FC393700DD4C3D /* RFMethodInfoTest.m in Sources */,
-				11146D5718FC393700DD4C3D /* RFPropertyInfoTest.m in Sources */,
+				04F7B21B1F458BAE001BA18B /* RFPropertyInfoTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,17 +428,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				119C1A2918BE4BD500FE3414 /* NSObject+RFAttributes.m in Sources */,
-				119C1A3918BE531E00FE3414 /* NSObject+RFMethodReflection.m in Sources */,
-				119C1A2F18BE4BD500FE3414 /* RFTypeDecoder.m in Sources */,
 				119C1A3F18BE533C00FE3414 /* NSObject+RFPropertyReflection.m in Sources */,
-				119C1A3E18BE533C00FE3414 /* NSObject+RFMemberVariableReflection.m in Sources */,
-				119C1A2D18BE4BD500FE3414 /* RFMethodInfo.m in Sources */,
-				119C1A3518BE52EA00FE3414 /* NSInvocation+RFExtension.m in Sources */,
-				119C1A2C18BE4BD500FE3414 /* RFIvarInfo.m in Sources */,
-				119C1A2A18BE4BD500FE3414 /* NSObject+RFAttributesInternal.m in Sources */,
-				119C1A2B18BE4BD500FE3414 /* RFAttributeCacheManager.m in Sources */,
 				119C1A2E18BE4BD500FE3414 /* RFPropertyInfo.m in Sources */,
-				119C1A3618BE52EA00FE3414 /* NSRegularExpression+RFExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,19 +437,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				119C1A6E18BE698800FE3414 /* SecondAnnotatedClass.m in Sources */,
-				119C1A7118BE698800FE3414 /* RFPropertyInfoTest.m in Sources */,
-				119C1A6818BE698800FE3414 /* AnnotatedClass.m in Sources */,
-				C458B6FA1988F72000E87CAE /* MultiLineTestAttribute.m in Sources */,
-				119C1A6A18BE698800FE3414 /* RFTestAttribute.m in Sources */,
-				C458B6F41988E09E00E87CAE /* MultiLineStringPropertyTest.m in Sources */,
-				119C1A6918BE698800FE3414 /* CustomRFTestAttribute.m in Sources */,
-				119C1A8018BF33CA00FE3414 /* ROADGeneratedAttribute.m in Sources */,
-				1176414318E5EC0A00B1688B /* GcovTestObserver.m in Sources */,
-				119C1A7018BE698800FE3414 /* RFMethodInfoTest.m in Sources */,
-				119C1A6718BE698800FE3414 /* AttributesAPITest.m in Sources */,
-				C458B6F71988F00200E87CAE /* MultiLineAttributedClass.m in Sources */,
-				119C1A6F18BE698800FE3414 /* RFIvarInfoTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -790,7 +548,9 @@
 		11146D4C18FC38F100DD4C3D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = EV9FR38NS9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
@@ -813,6 +573,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -821,8 +582,10 @@
 		11146D4D18FC38F100DD4C3D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = EV9FR38NS9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
@@ -841,6 +604,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -993,6 +757,8 @@
 		119C1A1418BE499800FE3414 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = EV9FR38NS9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1007,15 +773,18 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_EXPAND_BUILD_SETTINGS = NO;
-				INFOPLIST_FILE = "";
+				INFOPLIST_FILE = "libObjCAttMacTests/libObjCAttMacTests-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
 		119C1A1518BE499800FE3414 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = EV9FR38NS9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1026,9 +795,10 @@
 				GCC_PREFIX_HEADER = "libObjCAttr/libObjCAttr-Prefix.pch";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_EXPAND_BUILD_SETTINGS = NO;
-				INFOPLIST_FILE = "";
+				INFOPLIST_FILE = "libObjCAttMacTests/libObjCAttMacTests-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
